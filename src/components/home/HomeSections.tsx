@@ -68,7 +68,7 @@ export function HowWeWork() {
 export function AreasWeServe() {
   const nearby = business.serviceAreas.filter((a) => a !== 'Irugur' && a !== 'Coimbatore');
   return (
-    <Section id="areas" eyebrow="Service coverage" title="Areas We Serve" intro="Our office is in Irugur, Coimbatore. We also assist clients from nearby localities.">
+    <Section id="areas" eyebrow="Service coverage" title="Areas We Serve Across Tamil Nadu" intro="Our office is in Irugur, Coimbatore. We also assist clients from nearby localities.">
       <div className="mx-auto max-w-4xl">
         <div className="rounded-xl bg-navy p-6 text-center text-white">
           <p className="flex items-center justify-center gap-2 font-heading text-xl font-bold"><MapPin className="text-gold" size={22} aria-hidden="true" />Irugur, Coimbatore</p>
