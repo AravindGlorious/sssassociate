@@ -70,7 +70,7 @@ export function AreasWeServe() {
   return (
     <Section id="areas" eyebrow="Service coverage" title="Areas We Serve Across Tamil Nadu" intro="SSS Associate provides Legal, Property and Financial Consultancy Services to individuals, families and businesses across Tamil Nadu.
 
-We assist clients from major cities, towns and surrounding areas throughout Tamil Nadu. Whether you need property legal verification, documentation support, patta and chitta services, registration assistance, legal opinions or financial consultancy, our team is here to help.">
+We assist clients from major cities, towns and surrounding areas throughout Tamil Nadu. Whether you need property legal verification, documentation support, patta and chitta services, registration assistance, legal opinions or financial consultancy">
       <div className="mx-auto max-w-4xl">
         <div className="rounded-xl bg-navy p-6 text-center text-white">
           <p className="flex items-center justify-center gap-2 font-heading text-xl font-bold"><MapPin className="text-gold" size={22} aria-hidden="true" />Irugur, Coimbatore</p>
