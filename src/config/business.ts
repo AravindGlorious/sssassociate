@@ -5,10 +5,10 @@
  */
 const address = {
   street: '9, Gandhi Nagar',
-  locality: 'Irugur',
+  locality: 'Irugu',
   city: 'Coimbatore',
   region: 'Tamil Nadu',
-  postalCode: '641103',
+  postalCode: '64110',
   country: 'India',
   countryCode: 'IN',
 };
@@ -37,7 +37,7 @@ export const business = {
   /** Set these to the real profile URLs supplied by the business owner. */
   social: { facebook: '', instagram: '' },
   primaryArea: ['Coimbatore'],
-  serviceAreas: ['Coimbatore', 'Chennai', 'Tiruchirappalli', 'Madurai', 'Salem', 'Erode', 'Tiruppur', 'Vellore', 'Tirunelveli', 'Thoothukudi', 'Dindigul', 'Nagercoil', 'Kanchipuram', 'Thanjavur', 'Karur', 'Cuddalore', 'Nagapattinam', 'Ramanathapuram', 'Sivaganga', 'Virudhunagar'],
+  serviceAreas: ['Chennai', 'Tiruchirappalli', 'Madurai', 'Salem', 'Erode', 'Tiruppur', 'Vellore', 'Tirunelveli', 'Thoothukudi', 'Dindigul', 'Nagercoil', 'Kanchipuram', 'Thanjavur', 'Karur', 'Cuddalore', 'Nagapattinam', 'Ramanathapuram', 'Sivaganga', 'Virudhunagar'],
 } as const;
 
 export const whatsappLink = (message: string = business.whatsapp.message) =>
