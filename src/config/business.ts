@@ -37,7 +37,7 @@ export const business = {
   /** Set these to the real profile URLs supplied by the business owner. */
   social: { facebook: '', instagram: '' },
   primaryArea: 'Coimbatore',
-  serviceAreas: ['Irugur', 'Coimbatore', 'Chennai', 'Tiruchirappalli', 'Madurai', 'Salem', 'Erode', 'Tiruppur', 'Vellore', 'Tirunelveli', 'Thoothukudi', 'Dindigul', 'Nagercoil', 'Kanchipuram', 'Thanjavur', 'Karur', 'Cuddalore', 'Nagapattinam', 'Ramanathapuram', 'Sivaganga', 'Virudhunagar'],
+  serviceAreas: ['Coimbatore', 'Chennai', 'Tiruchirappalli', 'Madurai', 'Salem', 'Erode', 'Tiruppur', 'Vellore', 'Tirunelveli', 'Thoothukudi', 'Dindigul', 'Nagercoil', 'Kanchipuram', 'Thanjavur', 'Karur', 'Cuddalore', 'Nagapattinam', 'Ramanathapuram', 'Sivaganga', 'Virudhunagar'],
 } as const;
 
 export const whatsappLink = (message: string = business.whatsapp.message) =>
