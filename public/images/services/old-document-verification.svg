@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-hidden="true">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1d42"/><stop offset="1" stop-color="#173560"/></linearGradient>
+<pattern id="d" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#C6A15B" opacity=".25"/></pattern></defs>
+<rect width="1200" height="800" fill="url(#g)"/><rect width="1200" height="800" fill="url(#d)"/>
+<path d="M 680 0 A 760 760 0 0 1 1200 578" fill="none" stroke="#C6A15B" stroke-width="5" opacity=".7"/>
+<path d="M 720 0 A 730 730 0 0 1 1200 618" fill="none" stroke="#E8C777" stroke-width="1.5" opacity=".4"/>
+<circle cx="600" cy="400" r="225" fill="#ffffff" fill-opacity=".05" stroke="#C6A15B" stroke-width="2.5"/>
+<circle cx="600" cy="400" r="260" fill="none" stroke="#C6A15B" stroke-width="1" stroke-dasharray="4 10" opacity=".6"/>
+<g transform="translate(940 570) scale(4)" opacity=".4"><g fill="none" stroke="#C6A15B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></g></g><g transform="translate(170 150) scale(4)" opacity=".4"><g fill="none" stroke="#C6A15B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></g></g><g transform="translate(930 130) scale(4)" opacity=".4"><g fill="none" stroke="#C6A15B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line x1="8" x2="16" y1="12" y2="12"></line></g></g>
+<g transform="translate(456 256) scale(12)"><g fill="none" stroke="#E8C777" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><circle cx="11.5" cy="14.5" r="2.5"></circle><path d="M13.3 16.3 15 18"></path></g></g>
+</svg>

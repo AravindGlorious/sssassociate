@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-hidden="true">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1d42"/><stop offset="1" stop-color="#173560"/></linearGradient>
+<pattern id="d" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#C6A15B" opacity=".25"/></pattern></defs>
+<rect width="1200" height="800" fill="url(#g)"/><rect width="1200" height="800" fill="url(#d)"/>
+<path d="M 400 0 A 760 760 0 0 1 1200 560" fill="none" stroke="#C6A15B" stroke-width="5" opacity=".7"/>
+<path d="M 440 0 A 730 730 0 0 1 1200 600" fill="none" stroke="#E8C777" stroke-width="1.5" opacity=".4"/>
+<circle cx="600" cy="400" r="225" fill="#ffffff" fill-opacity=".05" stroke="#C6A15B" stroke-width="2.5"/>
+<circle cx="600" cy="400" r="260" fill="none" stroke="#C6A15B" stroke-width="1" stroke-dasharray="4 10" opacity=".6"/>
+<g transform="translate(150 560) scale(4)" opacity=".4"><g fill="none" stroke="#C6A15B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></g></g><g transform="translate(940 570) scale(4)" opacity=".4"><g fill="none" stroke="#C6A15B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path><path d="M8 11h8"></path><path d="M8 7h6"></path></g></g><g transform="translate(170 150) scale(4)" opacity=".4"><g fill="none" stroke="#C6A15B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></g></g>
+<g transform="translate(456 256) scale(12)"><g fill="none" stroke="#E8C777" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.226 20.925A2 2 0 0 0 6 22h12a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.127"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m5 11-3 3"></path><path d="m5 17-3-3h10"></path></g></g>
+</svg>

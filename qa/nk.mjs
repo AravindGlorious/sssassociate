@@ -1,0 +1,11 @@
+import chromium from '@sparticuz/chromium'; import puppeteer from 'puppeteer-core';
+const b = await puppeteer.launch({ args: chromium.args, executablePath: await chromium.executablePath(), headless: 'shell' });
+const p = await b.newPage(); await p.setViewport({ width: 390, height: 844 });
+p.on('response', (r) => { if (r.url().includes('/api/')) console.log('API', r.status(), r.url()); }); p.on('console', (m) => console.log('console', m.type(), m.text().slice(0, 120)));
+await p.goto('http://localhost:3140/services/property-registration', { waitUntil: 'networkidle2' });
+await p.type('#name', 'No Key'); await p.type('#phone', '9876543210'); await p.type('#message', 'Testing without email config'); await p.click('input[name=consent]'); await p.click('button[type=submit]');
+await new Promise((r) => setTimeout(r, 2500));
+const txt = await p.$eval('form', (f) => f.innerText);
+console.log('alert present:', !!(await p.$('[role=alert]')), '| text has fallback msg:', /could not send your enquiry by email/.test(txt), '| success text:', /enquiry has been sent/.test(txt), '| name kept:', await p.$eval('#name', (e) => e.value), '| WhatsApp btn:', /Send on WhatsApp/.test(txt), '| "not set up":', /not set up/i.test(txt));
+console.log(txt.slice(txt.indexOf('We could'), txt.indexOf('We could') + 200).replace(/\n/g, ' / '));
+await b.close();

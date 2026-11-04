@@ -1,0 +1,14 @@
+import chromium from '@sparticuz/chromium'; import puppeteer from 'puppeteer-core'; import fs from 'node:fs';
+const b = await puppeteer.launch({ args: chromium.args, executablePath: await chromium.executablePath(), headless: 'shell' });
+const p = await b.newPage(); await p.setViewport({ width: 390, height: 844 });
+p.on('response', (r) => { if (r.url().includes('/api/')) console.log('API', r.status()); });
+const before = fs.existsSync('/tmp/mock.log') ? fs.readFileSync('/tmp/mock.log', 'utf8').trim().split('\n').filter((l) => l.includes('subject')).length : 0;
+await p.goto('http://localhost:3141/services/patta-chitta-services', { waitUntil: 'networkidle2' });
+console.log('preselected:', await p.$eval('#service', (s) => s.value));
+await p.type('#name', 'Success Path'); await p.type('#phone', '+91 98765 43210'); await p.type('#email', 'visitor@example.com'); await p.type('#message', 'Please help me get patta and chitta extracts.'); await p.click('input[name=consent]');
+await p.evaluate(() => { const b = document.querySelector('button[type=submit]'); b.click(); b.click(); b.click(); });
+await p.waitForSelector('[role=status]', { timeout: 10000 }).then(async () => console.log('success box:', await p.$eval('[role=status]', (e) => e.textContent.slice(0, 60)))).catch(() => console.log('NO success box'));
+await new Promise((r) => setTimeout(r, 800));
+const rows = fs.readFileSync('/tmp/mock.log', 'utf8').trim().split('\n').filter((l) => l.includes('subject')).map((l) => JSON.parse(l));
+console.log('new emails received by mock:', rows.length - before, '| last:', rows.at(-1).subject, '|', rows.at(-1).reply_to, '|', rows.at(-1).text.split('\n').slice(0, 2).join(' / '));
+await b.close();
