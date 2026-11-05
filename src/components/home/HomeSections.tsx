@@ -66,20 +66,50 @@ export function HowWeWork() {
 }
 
 export function AreasWeServe() {
-  const nearby = business.serviceAreas.filter((a) => a !== && a !== 'Coimbatore');
+  const nearby = business.serviceAreas.filter(
+  (a) => a === 'Coimbatore'
+);
   return (
-    <Section id="areas" eyebrow="Service coverage" title="Areas We Serve Across Tamil Nadu" intro="SSS Associate provides Legal, Property and Financial Consultancy Services to individuals, families and businesses across Tamil Nadu.
-We assist clients from major cities, towns and surrounding areas throughout Tamil Nadu. Whether you need property legal verification, documentation support, patta and chitta services, registration assistance, legal opinions or financial consultancy">
-      <div className="mx-auto max-w-4xl">
-        <div className="rounded-xl bg-navy p-6 text-center text-white">
-          <p className="flex items-center justify-center gap-2 font-heading text-xl font-bold"><MapPin className="text-gold" size={22} aria-hidden="true" />Irugur, Coimbatore</p>
-          <p className="mt-1 text-sm text-white/80">{business.oneLineAddress}</p>
-        </div>
-        <ul className="mt-6 flex flex-wrap justify-center gap-3">
-          {nearby.map((a) => <li key={a} className="rounded-full border border-gold/60 bg-white px-5 py-2 text-sm font-semibold text-navy">{a}</li>)}
-        </ul>
-        <p className="mt-6 text-center text-sm text-muted">Not in this list? <Link href="/contact" className="font-semibold text-gold-text underline">Get in touch</Link> and we will tell you how we can help.</p>
-      </div>
-    </Section>
+    <Section
+  id="areas"
+  eyebrow="Service coverage"
+  title="Areas We Serve Across Tamil Nadu"
+  intro="SSS Associate provides Legal, Property and Financial Consultancy Services to individuals, families and businesses across Tamil Nadu. We assist clients from major cities, towns and surrounding areas throughout Tamil Nadu. Whether you need property legal verification, documentation support, patta and chitta services, registration assistance, legal opinions or financial consultancy, contact our team for professional assistance."
+>
+  <div className="mx-auto max-w-4xl">
+    <div className="rounded-xl bg-navy p-6 text-center text-white">
+      <p className="flex items-center justify-center gap-2 font-heading text-xl font-bold">
+        <MapPin className="text-gold" size={22} aria-hidden="true" />
+        Coimbatore, Tamil Nadu
+      </p>
+
+      <p className="mt-1 text-sm text-white/80">
+        {business.oneLineAddress}
+      </p>
+    </div>
+
+    <ul className="mt-6 flex flex-wrap justify-center gap-3">
+      {nearby.map((a) => (
+        <li
+          key={a}
+          className="rounded-full border border-gold/60 bg-white px-5 py-2 text-sm font-semibold text-navy"
+        >
+          {a}
+        </li>
+      ))}
+    </ul>
+
+    <p className="mt-6 text-center text-sm text-muted">
+      Need assistance anywhere in Tamil Nadu?{" "}
+      <Link
+        href="/contact"
+        className="font-semibold text-gold-text underline"
+      >
+        Contact SSS Associate
+      </Link>{" "}
+      to discuss your requirements.
+    </p>
+  </div>
+</Section>
   );
 }
