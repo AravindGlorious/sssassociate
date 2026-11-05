@@ -3,7 +3,6 @@ import { Coins, FileSearch, FileText, House, Languages, MapPin, MessageSquareTex
 import { Section } from '@/components/ui/Section';
 import { CategoryOverviewCard } from '@/components/services/CategoryOverviewCard';
 import { byCategory, categories } from '@/data/services';
-import { business } from '@/config/business';
 
 export function ServicesOverview() {
   return (
@@ -23,7 +22,7 @@ const why = [
   { Icon: Users, title: 'One point of contact', text: 'Legal, property and financial matters often overlap. We help you coordinate them instead of chasing each office separately.' },
   { Icon: MessageSquareText, title: 'Clear communication in English and Tamil', text: 'We explain findings in plain language and can work with documents and opinions in both languages.' },
   { Icon: ShieldCheck, title: 'Honest about limits', text: 'We do not promise outcomes or approvals. Opinions and representation come from qualified advocates, and we tell you what each matter really depends on.' },
-  { Icon: MapPin, title: 'Local presence in Irugur', text: 'Our office is in Irugur, Coimbatore, and we serve clients across nearby areas.' },
+  { Icon: MapPin, title: 'Service Across Tamil Nadu', text: 'We assist clients across Tamil Nadu with legal, property and financial consultancy requirements.' },
   { Icon: FileText, title: 'Case-by-case guidance', text: 'Requirements differ for every property and every dispute, so we confirm what applies to you before you spend time or money.' },
 ];
 
@@ -65,51 +64,71 @@ export function HowWeWork() {
   );
 }
 
+
 export function AreasWeServe() {
-  const nearby = business.serviceAreas.filter(
-  (a) => a === 'Coimbatore'
-);
+  const serviceAreas = [
+    'Chennai',
+    'Coimbatore',
+    'Tiruchirappalli',
+    'Madurai',
+    'Salem',
+    'Erode',
+    'Tiruppur',
+    'Thanjavur',
+    'Vellore',
+    'Tirunelveli',
+    'Dindigul',
+    'Namakkal',
+    'Karur',
+    'Kanchipuram',
+    'Tiruvallur',
+    'Villupuram',
+    'Cuddalore',
+    'Thoothukudi',
+    'Nagercoil',
+    'Across Tamil Nadu',
+  ];
+
   return (
     <Section
-  id="areas"
-  eyebrow="Service coverage"
-  title="Areas We Serve Across Tamil Nadu"
-  intro="SSS Associate provides Legal, Property and Financial Consultancy Services to individuals, families and businesses across Tamil Nadu. We assist clients from major cities, towns and surrounding areas throughout Tamil Nadu. Whether you need property legal verification, documentation support, patta and chitta services, registration assistance, legal opinions or financial consultancy, contact our team for professional assistance."
->
-  <div className="mx-auto max-w-4xl">
-    <div className="rounded-xl bg-navy p-6 text-center text-white">
-      <p className="flex items-center justify-center gap-2 font-heading text-xl font-bold">
-        <MapPin className="text-gold" size={22} aria-hidden="true" />
-        Coimbatore, Tamil Nadu
-      </p>
+      id="areas"
+      eyebrow="Service coverage"
+      title="Areas We Serve Across Tamil Nadu"
+      intro="SSS Associate provides Legal, Property and Financial Consultancy Services to individuals, families and businesses across Tamil Nadu. We assist clients with property legal verification, documentation support, patta and chitta services, registration assistance, legal opinions and financial consultancy."
+    >
+      <div className="mx-auto max-w-5xl">
+        <div className="rounded-xl bg-navy p-6 text-center text-white">
+          <p className="flex items-center justify-center gap-2 font-heading text-xl font-bold">
+            <MapPin className="text-gold" size={22} aria-hidden="true" />
+            Serving Clients Across Tamil Nadu
+          </p>
+          <p className="mt-2 text-sm text-white/80">
+            Professional assistance for clients throughout Tamil Nadu.
+          </p>
+        </div>
 
-      <p className="mt-1 text-sm text-white/80">
-        {business.oneLineAddress}
-      </p>
-    </div>
+        <ul className="mt-6 flex flex-wrap justify-center gap-3">
+          {serviceAreas.map((area) => (
+            <li
+              key={area}
+              className="rounded-full border border-gold/60 bg-white px-5 py-2 text-sm font-semibold text-navy"
+            >
+              {area}
+            </li>
+          ))}
+        </ul>
 
-    <ul className="mt-6 flex flex-wrap justify-center gap-3">
-      {nearby.map((a) => (
-        <li
-          key={a}
-          className="rounded-full border border-gold/60 bg-white px-5 py-2 text-sm font-semibold text-navy"
-        >
-          {a}
-        </li>
-      ))}
-    </ul>
-
-    <p className="mt-6 text-center text-sm text-muted">
-      Need assistance anywhere in Tamil Nadu?{" "}
-      <Link
-        href="/contact"
-        className="font-semibold text-gold-text underline"
-      >
-        Contact SSS Associate
-      </Link>{" "}
-      to discuss your requirements.
-    </p>
-  </div>
-</Section>
+        <p className="mt-6 text-center text-sm text-muted">
+          Need assistance anywhere in Tamil Nadu?{' '}
+          <Link
+            href="/contact"
+            className="font-semibold text-gold-text underline"
+          >
+            Contact SSS Associate
+          </Link>{' '}
+          to discuss your requirements.
+        </p>
+      </div>
+    </Section>
   );
 }
