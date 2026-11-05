@@ -5,7 +5,7 @@
  */
 const address = {
   street: '9, Gandhi Nagar',
-  locality: 'Irugu',
+  locality: 'Irugur',
   city: 'Coimbatore',
   region: 'Tamil Nadu',
   postalCode: '64110',
@@ -36,7 +36,7 @@ export const business = {
   )}`,
   /** Set these to the real profile URLs supplied by the business owner. */
   social: { facebook: '', instagram: '' },
-  primaryArea: ['Coimbatore'],
+  primaryArea: ['Coi'],
   serviceAreas: ['Chennai', 'Tiruchirappalli', 'Madurai', 'Salem', 'Erode', 'Tiruppur', 'Vellore', 'Tirunelveli', 'Thoothukudi', 'Dindigul', 'Nagercoil', 'Kanchipuram', 'Thanjavur', 'Karur', 'Cuddalore', 'Nagapattinam', 'Ramanathapuram', 'Sivaganga', 'Virudhunagar'],
 } as const;
 
