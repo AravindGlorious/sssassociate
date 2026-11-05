@@ -66,10 +66,9 @@ export function HowWeWork() {
 }
 
 export function AreasWeServe() {
-  const nearby = business.serviceAreas.filter((a) => a !== 'Irugur' && a !== 'Coimbatore');
+  const nearby = business.serviceAreas.filter((a) => a !== && a !== 'Coimbatore');
   return (
     <Section id="areas" eyebrow="Service coverage" title="Areas We Serve Across Tamil Nadu" intro="SSS Associate provides Legal, Property and Financial Consultancy Services to individuals, families and businesses across Tamil Nadu.
-
 We assist clients from major cities, towns and surrounding areas throughout Tamil Nadu. Whether you need property legal verification, documentation support, patta and chitta services, registration assistance, legal opinions or financial consultancy">
       <div className="mx-auto max-w-4xl">
         <div className="rounded-xl bg-navy p-6 text-center text-white">
