@@ -14,7 +14,7 @@ import { publishedPosts } from '@/data/blog';
 import { PageSchema } from '@/components/seo/PageSchema';
 import { pageMetadata } from '@/lib/seo';
 
-const description = 'SSS Associate Services in Coimbatore offers property document verification, legal opinion support, patta transfer, registration assistance and financial settlement guidance.';
+const description = 'SSS Associate Services in Coimbatore offers property document verification, legal opinions, patta transfer, registration and financial settlement support.';
 export const metadata: Metadata = pageMetadata({ title: 'Property & Legal Services in Coimbatore | SSS Associate', description, path: '/', fullTitle: true });
 
 export default function HomePage() {
