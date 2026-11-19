@@ -1,32 +1,98 @@
+
 import type { Metadata } from 'next';
 import { business } from '@/config/business';
 
 export const SITE_SUFFIX = ' | SSS Associate';
 
-/** Absolute URL for a site path. No trailing slashes anywhere (the homepage is just the bare origin), matching how Next.js renders canonicals. */
-export const absoluteUrl = (path: string) => (path === '/' ? business.url : `${business.url}${path}`);
+/**
+ * Creates an absolute URL using the primary website domain.
+ * Homepage canonical uses the bare domain.
+ */
+export const absoluteUrl = (path: string): string => {
+  const origin = business.url.replace(/\/+$/, '');
+
+  if (path === '/') {
+    return `${origin}/`;
+  }
+
+  return `${origin}/${path.replace(/^\/+/, '')}`;
+};
 
 interface PageMeta {
-  /** Page title. The brand suffix is added unless `fullTitle` is true. */
   title: string;
   description: string;
   path: string;
   fullTitle?: boolean;
-  /** Set false for pages that should not appear in search results. They stay out of the sitemap too. */
   index?: boolean;
 }
 
-/** Builds per-page metadata: title, description, self-referencing canonical, robots, Open Graph and Twitter card. */
-export function pageMetadata({ title, description, path, fullTitle = false, index = true }: PageMeta): Metadata {
+/**
+ * Generates consistent SEO metadata for every page:
+ * title, description, canonical, robots, Open Graph and Twitter.
+ */
+export function pageMetadata({
+  title,
+  description,
+  path,
+  fullTitle = false,
+  index = true,
+}: PageMeta): Metadata {
   const full = fullTitle ? title : `${title}${SITE_SUFFIX}`;
+
   const url = absoluteUrl(path);
-  const image = { url: absoluteUrl('/images/og-sss-associate.jpg'), width: 1200, height: 630, alt: `${business.shortName} – ${business.tagline} in Irugur, Coimbatore` };
+
+  const imageUrl = absoluteUrl('/images/og-sss-associate.jpg');
+
+  const image = {
+    url: imageUrl,
+    width: 1200,
+    height: 630,
+    alt: 'SSS Associate Services – Legal documentation and financial assistance',
+  };
+
   return {
-    title: { absolute: full },
+    title: {
+      absolute: full,
+    },
+
     description,
-    alternates: { canonical: url },
-    robots: index ? { index: true, follow: true } : { index: false, follow: true },
-    openGraph: { title: full, description, url, siteName: business.shortName, locale: 'en_IN', type: 'website', images: [image] },
-    twitter: { card: 'summary_large_image', title: full, description, images: [image.url] },
+
+    alternates: {
+      canonical: url,
+    },
+
+    robots: index
+      ? {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+            'max-video-preview': -1,
+          },
+        }
+      : {
+          index: false,
+          follow: true,
+        },
+
+    openGraph: {
+      title: full,
+      description,
+      url,
+      siteName: business.shortName,
+      locale: 'en_IN',
+      type: 'website',
+      images: [image],
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title: full,
+      description,
+      images: [imageUrl],
+    },
   };
 }

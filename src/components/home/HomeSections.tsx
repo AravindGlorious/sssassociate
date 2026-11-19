@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import {
   Coins,
@@ -25,7 +24,7 @@ export function ServicesOverview() {
       id="services"
       eyebrow="What we do"
       title="Our Services"
-      intro="Coordinated legal, property and financial consultancy support to help you manage important documents and make informed decisions."
+      intro="Practical assistance with important documents, registration procedures and financial matters to help you make informed decisions."
     >
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <li>
@@ -34,33 +33,36 @@ export function ServicesOverview() {
             title="Legal Services"
             href={categories.legal.path}
             count={byCategory('legal').length}
-            text="Legal opinions through qualified advocates, document verification and dispute support."
+            text="Document review assistance, legal process guidance and support in connecting with qualified advocates when required."
           />
         </li>
+
         <li>
           <CategoryOverviewCard
             Icon={House}
-            title="Property Services"
+            title="Land & Registration"
             href={categories.property.path}
             count={byCategory('property').length}
-            text="Registration, patta, EC, sale deed and property documentation assistance."
+            text="Assistance with patta, EC, sale deeds, land records and registration procedures."
           />
         </li>
+
         <li>
           <CategoryOverviewCard
             Icon={Coins}
             title="Financial Services"
             href={categories.financial.path}
             count={byCategory('financial').length}
-            text="Bank settlement support, OTS preparation and loan documentation assistance."
+            text="Support with bank-related paperwork, one-time settlement documentation and loan matters."
           />
         </li>
+
         <li>
           <CategoryOverviewCard
             Icon={Languages}
             title="Documentation & Translation"
             href="/services/legal-document-translation"
-            text="English to Tamil and Tamil to English translation of legal and property documents."
+            text="Tamil to English and English to Tamil translation assistance for relevant legal and official documents."
           />
         </li>
       </ul>
@@ -71,33 +73,33 @@ export function ServicesOverview() {
 const why = [
   {
     Icon: FileSearch,
-    title: 'Document-Focused Approach',
-    text: 'We carefully review relevant documents to help identify important details and potential issues.',
+    title: 'Careful Document Review',
+    text: 'We help you understand important details in the documents you share and identify points that may need further attention.',
   },
   {
     Icon: Users,
-    title: 'Coordinated Assistance',
-    text: 'We help coordinate related legal, property and financial documentation requirements.',
+    title: 'Coordinated Support',
+    text: 'We help organise related paperwork and connect you with the appropriate professional support when needed.',
   },
   {
     Icon: MessageSquareText,
-    title: 'Clear Communication',
-    text: 'We explain requirements and available next steps in simple English and Tamil.',
+    title: 'Simple Communication',
+    text: 'We explain processes, document requirements and next steps in clear English and Tamil.',
   },
   {
     Icon: ShieldCheck,
-    title: 'Transparent Guidance',
-    text: 'We explain the scope and limitations of our services without promising guaranteed outcomes.',
+    title: 'Honest and Transparent',
+    text: 'We explain our services, fees and limitations clearly. We do not promise guaranteed approvals or outcomes.',
   },
   {
     Icon: MapPin,
-    title: 'Tamil Nadu Service Coverage',
-    text: 'We assist clients from cities and towns across Tamil Nadu, subject to the requirements of each matter.',
+    title: 'Support Across Tamil Nadu',
+    text: 'We assist customers from different cities and towns across Tamil Nadu, depending on the service and requirements.',
   },
   {
     Icon: FileText,
-    title: 'Case-by-Case Support',
-    text: 'Every matter is different. We help identify the documentation and professional assistance relevant to your case.',
+    title: 'Individual Attention',
+    text: 'We understand your requirement first and help identify the documents and assistance relevant to your situation.',
   },
 ];
 
@@ -107,8 +109,8 @@ export function WhyChoose() {
       id="why-us"
       tone="mist"
       eyebrow="Why SSS Associate"
-      title="Why Choose SSS Associate"
-      intro="Professional support built around clear communication, careful documentation and practical guidance."
+      title="Why Work With Us?"
+      intro="Our approach focuses on clear communication, organised paperwork and dependable customer support."
     >
       <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {why.map(({ Icon, title, text }) => (
@@ -119,10 +121,12 @@ export function WhyChoose() {
             <span className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-navy text-gold">
               <Icon size={22} aria-hidden="true" />
             </span>
+
             <div>
               <h3 className="font-heading text-lg font-bold text-navy">
                 {title}
               </h3>
+
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {text}
               </p>
@@ -136,20 +140,20 @@ export function WhyChoose() {
 
 const steps = [
   {
-    title: 'Share Your Requirement',
-    text: 'Contact us by phone, WhatsApp or enquiry form and briefly explain your requirement.',
+    title: 'Tell Us What You Need',
+    text: 'Call, send a WhatsApp message or use our enquiry form to explain your requirement.',
   },
   {
-    title: 'Submit Relevant Documents',
-    text: 'Share the available documents so we can understand your specific matter.',
+    title: 'Share the Documents',
+    text: 'Provide the available paperwork related to your enquiry so we can understand the matter.',
   },
   {
-    title: 'Review Your Options',
-    text: 'We explain the relevant requirements, possible next steps and when professional legal advice is needed.',
+    title: 'Understand the Next Steps',
+    text: 'We explain the relevant process, document requirements and when specialist advice may be necessary.',
   },
   {
-    title: 'Proceed with Assistance',
-    text: 'We help coordinate the relevant documentation and follow-up based on the agreed scope of work.',
+    title: 'Get the Agreed Support',
+    text: 'We assist with the agreed documentation and follow-up based on the nature of your request.',
   },
 ];
 
@@ -160,7 +164,7 @@ export function HowWeWork() {
       tone="navy"
       eyebrow="Our process"
       title="How We Work"
-      intro="A clear and straightforward process to help you move forward."
+      intro="Four simple steps to help you understand and manage your requirements."
     >
       <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
@@ -171,9 +175,11 @@ export function HowWeWork() {
             <span className="font-heading text-4xl font-bold text-gold">
               {String(index + 1).padStart(2, '0')}
             </span>
+
             <h3 className="mt-3 font-heading text-lg font-bold text-white">
               {step.title}
             </h3>
+
             <p className="mt-2 text-sm leading-relaxed text-white/80">
               {step.text}
             </p>
@@ -211,8 +217,8 @@ export function AreasWeServe() {
     <Section
       id="areas"
       eyebrow="Our reach"
-      title="Legal, Property & Financial Consultancy Across Tamil Nadu"
-      intro="SSS Associate supports individuals, families and businesses with property documentation, legal coordination and financial consultancy requirements across Tamil Nadu."
+      title="Serving Customers Across Tamil Nadu"
+      intro="We provide assistance with document-related requirements, registration procedures and financial paperwork for customers across Tamil Nadu."
     >
       <div className="mx-auto max-w-5xl">
         <div className="rounded-2xl bg-navy p-7 text-center text-white shadow-lg sm:p-10">
@@ -221,18 +227,20 @@ export function AreasWeServe() {
             size={34}
             aria-hidden="true"
           />
+
           <h3 className="mt-4 font-heading text-2xl font-bold sm:text-3xl">
-            Serving Clients Across Tamil Nadu
+            Assistance Across Multiple Cities
           </h3>
+
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/75">
-            Access coordinated assistance for legal, property and financial
-            documentation requirements, wherever you are in Tamil Nadu.
+            Contact our team to discuss your requirements and
+            check the availability of assistance in your location.
           </p>
         </div>
 
         <div className="mt-8">
           <h3 className="mb-5 text-center font-heading text-lg font-bold text-navy">
-            Cities and Locations We Serve
+            Cities and Locations
           </h3>
 
           <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -254,12 +262,14 @@ export function AreasWeServe() {
 
         <div className="mt-9 rounded-xl border border-gray-200 bg-white p-6 text-center sm:p-8">
           <h3 className="font-heading text-xl font-bold text-navy">
-            Need Professional Assistance?
+            How Can We Help You?
           </h3>
+
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            Tell us about your legal, property or financial requirement.
-            Our team will help you understand the next steps.
+            Tell us what assistance you need. Our team will
+            explain the available services and the next steps.
           </p>
+
           <Link
             href="/contact"
             className="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy/90"

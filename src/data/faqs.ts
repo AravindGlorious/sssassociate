@@ -1,10 +1,43 @@
-export interface Faq { question: string; answer: string }
+
+export interface Faq {
+  question: string;
+  answer: string;
+}
 
 export const homeFaqs: Faq[] = [
-  { question: 'What services does SSS Associate offer?', answer: 'We assist with legal opinions, property documentation and registration, patta and chitta services, Encumbrance Certificates, document translation between English and Tamil, and financial matters such as bank settlements and loan paperwork.' },
-  { question: 'Who provides the legal opinions and court representation?', answer: 'Legal opinions and representation are provided by appropriately qualified advocates where applicable. SSS Associate assists with documents, coordination and communication around that work.' },
-  { question: 'Can you guarantee a result or approval?', answer: 'No. Outcomes depend on the facts, the documents and the decisions of courts, government offices and lenders. We do not promise legal outcomes, loan approvals or settlement approvals.' },
-  { question: 'Which documents will I need to provide?', answer: 'It depends on the property and the matter. After we understand your situation, we confirm what is needed for your specific case rather than giving a one-size-fits-all list.' },
-  { question: 'Do you work with documents in Tamil?', answer: 'Yes. We offer legal opinions in English and Tamil, and translation of legal and property documents from English to Tamil and Tamil to English.' },
-  { question: 'How do I get started?', answer: 'Call us, message us on WhatsApp or send an enquiry through the contact form. Tell us briefly what you need and we will respond with the next steps.' },
+  {
+    question: 'What services does SSS Associate provide?',
+    answer:
+      'We assist with document verification, legal documentation, registration procedures, patta and chitta services, Encumbrance Certificates, Tamil and English document translation, and bank-related paperwork.',
+  },
+  {
+    question: 'Who handles legal opinions and court representation?',
+    answer:
+      'Where legal advice or court representation is required, it is handled by appropriately qualified advocates. SSS Associate provides documentation assistance and coordination for related services.',
+  },
+  {
+    question: 'Can you guarantee legal or financial approvals?',
+    answer:
+      'No. Decisions depend on the documents, facts and the authorities or lenders involved. We do not guarantee court outcomes, government approvals, loan approvals or bank settlements.',
+  },
+  {
+    question: 'What documents should I submit?',
+    answer:
+      'The required documents depend on your situation. Contact us with a brief explanation of your requirement. We will help identify the relevant paperwork for your matter.',
+  },
+  {
+    question: 'Can I get help with Tamil documents?',
+    answer:
+      'Yes. We assist with Tamil and English document translation. We can help with translation requirements for relevant legal and official documents.',
+  },
+  {
+    question: 'Do you provide assistance across Tamil Nadu?',
+    answer:
+      'We assist customers from different locations across Tamil Nadu, depending on the service required. Contact our team to check whether we can support your specific request.',
+  },
+  {
+    question: 'How can I contact SSS Associate?',
+    answer:
+      'You can call us, send a WhatsApp message or submit an enquiry through our contact page. Briefly explain what you need, and our team will guide you on the next steps.',
+  },
 ];

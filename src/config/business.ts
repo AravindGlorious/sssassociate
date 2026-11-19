@@ -1,8 +1,8 @@
 
 /**
  * Single source of truth for business information.
- * Only verified details belong here.
- * Leave social URLs empty until the owner supplies them.
+ * Only verified business details should be stored here.
+ * Add social URLs only after they are confirmed.
  */
 
 const address = {
@@ -18,15 +18,16 @@ const address = {
 const oneLineAddress =
   `${address.street}, ${address.locality}, ${address.city}, ${address.region} – ${address.postalCode}`;
 
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://sssassociate.org'
+).replace(/\/+$/, '');
+
 export const business = {
   name: 'SSS ASSOCIATE',
   shortName: 'SSS Associate',
-  tagline: 'Legal, Property & Financial Services',
+  tagline: 'Legal, Documentation & Financial Services',
 
-  url: (
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    'https://sss-associate.vercel.app'
-  ).replace(/\/$/, ''),
+  url: siteUrl,
 
   email: 'sssassociateservices@gmail.com',
 
@@ -45,7 +46,7 @@ export const business = {
   oneLineAddress,
 
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    `SSS Associate, ${address.street}, ${address.locality}, ${address.city}, ${address.region} ${address.postalCode}`
+    `SSS Associate, ${address.street}, ${address.locality}, ${address.city}, ${address.region} ${address.postalCode}, India`
   )}`,
 
   social: {
