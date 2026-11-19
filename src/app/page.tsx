@@ -15,7 +15,7 @@ import { PageSchema } from '@/components/seo/PageSchema';
 import { pageMetadata } from '@/lib/seo';
 
 const description = 'SSS Associate in Irugur, Coimbatore helps with property documents, legal opinions through qualified advocates, registration support and financial settlement.';
-export const metadata: Metadata = pageMetadata({ title: 'Legal, Property & Financial Services in Coimbatore | SSS Associate', description, path: '/', fullTitle: true });
+export const metadata: Metadata = pageMetadata({ title: 'Property & Legal Services in Coimbatore | SSS Associate', description, path: '/', fullTitle: true });
 
 export default function HomePage() {
   return (
