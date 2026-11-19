@@ -1,3 +1,4 @@
+
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { preload } from 'react-dom';
@@ -10,36 +11,112 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
+const siteUrl = 'https://www.sssassociate.org';
+
+const seoTitle =
+  'Property & Legal Services in Coimbatore | SSS Associate';
+
+const seoDescription =
+  'SSS Associate Services in Coimbatore offers property document verification, legal opinions, patta transfer, registration and financial settlement support.';
+
 export const metadata: Metadata = {
-  metadataBase: new URL(business.url),
-  title: { default: `${business.shortName} – ${business.tagline} in Coimbatore`, template: `%s | ${business.shortName}` },
-  description: 'Professional assistance for property documentation, legal opinions, registration support and financial settlement matters in Irugur, Coimbatore.',
-  formatDetection: { telephone: false },
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: seoTitle,
+    template: `%s | ${business.shortName}`,
+  },
+
+  description: seoDescription,
+
+  alternates: {
+    canonical: '/',
+  },
+
+  formatDetection: {
+    telephone: false,
+  },
+
   applicationName: business.shortName,
-  robots: { index: true, follow: true },
-  ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
-  openGraph: { siteName: business.shortName, locale: 'en_IN', type: 'website' },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.GOOGLE_SITE_VERIFICATION,
+        },
+      }
+    : {}),
+
+  openGraph: {
+    title: seoTitle,
+    description: seoDescription,
+    url: siteUrl,
+    siteName: business.shortName,
+    locale: 'en_IN',
+    type: 'website',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: seoTitle,
+    description: seoDescription,
+  },
 };
 
-export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#101D35' };
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#101D35',
+};
 
-export default function RootLayout({ children }: { children: ReactNode }) {
-  // One preload per font file (React de-duplicates and places these in <head>).
-  preload('/fonts/inter-latin-wght-normal.woff2', { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' });
-  preload('/fonts/playfair-display-latin-wght-normal.woff2', { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' });
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  // Preload fonts for better loading performance.
+  preload('/fonts/inter-latin-wght-normal.woff2', {
+    as: 'font',
+    type: 'font/woff2',
+    crossOrigin: 'anonymous',
+  });
+
+  preload('/fonts/playfair-display-latin-wght-normal.woff2', {
+    as: 'font',
+    type: 'font/woff2',
+    crossOrigin: 'anonymous',
+  });
+
   return (
     <html lang="en-IN">
       <head>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
       </head>
+
       <body>
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-gold focus:px-4 focus:py-2 focus:text-navy">Skip to main content</a>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-gold focus:px-4 focus:py-2 focus:text-navy"
+        >
+          Skip to main content
+        </a>
+
         <TopBar />
         <Header />
+
         <main id="main">{children}</main>
+
         <Footer />
-        <aside aria-label="WhatsApp enquiry"><WhatsAppButton /></aside>
+
+        <aside aria-label="WhatsApp enquiry">
+          <WhatsAppButton />
+        </aside>
       </body>
     </html>
   );
