@@ -42,8 +42,7 @@ export function Hero() {
             src="/images/hero.jpg"
             alt="House with legal books, a gavel and scales of justice"
             fill
-            priority
-            fetchPriority="high"
+            preload
             sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
