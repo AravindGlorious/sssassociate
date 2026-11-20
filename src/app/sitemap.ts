@@ -5,7 +5,6 @@ import { services } from '@/data/services';
 import { publishedPosts } from '@/data/blog';
 import { absoluteUrl } from '@/lib/seo';
 
-// Main indexable website pages.
 const corePages = [
   '/',
   '/about',
@@ -16,7 +15,6 @@ const corePages = [
   '/contact',
 ];
 
-// Important policy and information pages.
 const policyPages = [
   '/privacy-policy',
   '/terms',
@@ -28,6 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...corePages,
 
     ...(publishedPosts.length > 0 ? ['/blog'] : []),
+
+    ...publishedPosts.map((post) => `/blog/${post.slug}`),
 
     ...services.map((service) => `/services/${service.slug}`),
 
@@ -42,13 +42,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (path === '/') {
       priority = 1;
     } else if (
-      path === '/services' ||
-      path === '/legal-services' ||
-      path === '/property-services' ||
-      path === '/financial-services'
+      [
+        '/services',
+        '/legal-services',
+        '/property-services',
+        '/financial-services',
+      ].includes(path)
     ) {
       priority = 0.8;
-    } else if (path.startsWith('/services/')) {
+    } else if (
+      path.startsWith('/services/') ||
+      path.startsWith('/blog/')
+    ) {
       priority = 0.8;
     } else if (policyPages.includes(path)) {
       priority = 0.3;
@@ -56,7 +61,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return {
       url: absoluteUrl(path),
-      lastModified: new Date(),
       changeFrequency: path === '/' ? 'weekly' : 'monthly',
       priority,
     };

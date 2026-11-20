@@ -9,7 +9,6 @@ export const SITE_SUFFIX = ' | SSS Associate';
  */
 export const absoluteUrl = (path: string): string => {
   const origin = business.url.replace(/\/+$/, '');
-
   const cleanPath = path.replace(/^\/+/, '');
 
   return cleanPath ? `${origin}/${cleanPath}` : `${origin}/`;
@@ -49,13 +48,10 @@ export function pageMetadata({
     title: {
       absolute: full,
     },
-
     description,
-
     alternates: {
       canonical: url,
     },
-
     robots: index
       ? {
           index: true,
@@ -72,7 +68,6 @@ export function pageMetadata({
           index: false,
           follow: true,
         },
-
     openGraph: {
       title: full,
       description,
@@ -82,7 +77,6 @@ export function pageMetadata({
       type: 'website',
       images: [image],
     },
-
     twitter: {
       card: 'summary_large_image',
       title: full,

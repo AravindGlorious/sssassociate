@@ -137,3 +137,62 @@ export const webPageSchema = (
     '@id': businessId,
   },
 });
+
+/**
+ * Blog article structured data.
+ */
+interface BlogPostingSchemaProps {
+  title: string;
+  description: string;
+  path: string;
+  publishedAt: string;
+  updatedAt?: string;
+  author: {
+    name: string;
+    type: 'Person' | 'Organization';
+    url?: string;
+  };
+  image?: string;
+}
+
+export const blogPostingSchema = ({
+  title,
+  description,
+  path,
+  publishedAt,
+  updatedAt,
+  author,
+  image,
+}: BlogPostingSchemaProps) => {
+  const articleUrl = absoluteUrl(path);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+
+    '@id': `${articleUrl}#article`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+
+    headline: title,
+    description,
+    inLanguage: 'en-IN',
+
+    datePublished: publishedAt,
+    dateModified: updatedAt || publishedAt,
+
+    author: {
+      '@type': author.type,
+      name: author.name,
+      ...(author.url ? { url: absoluteUrl(author.url) } : {}),
+    },
+
+    publisher: {
+      '@id': businessId,
+    },
+
+    ...(image ? { image: absoluteUrl(image) } : {}),
+  };
+};
