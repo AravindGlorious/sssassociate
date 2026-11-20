@@ -59,9 +59,9 @@ export function FeaturedServices({
         <Link
           href={categoryInfo.path}
           className="btn btn-dark btn-sm"
-          aria-label={`View all ${categoryInfo.title}`}
+          aria-label={`Explore all ${categoryInfo.title}`}
         >
-          View All {categoryInfo.title}
+          Explore All {categoryInfo.title}
           <ArrowRight size={16} aria-hidden="true" />
         </Link>
       </div>

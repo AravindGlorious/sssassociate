@@ -15,10 +15,10 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 const siteUrl = business.url.replace(/\/+$/, '');
 
 const seoTitle =
-  'Legal & Documentation Services in Coimbatore | SSS Associate';
+  'Property Document & Registration Support in Coimbatore | SSS Associate';
 
 const seoDescription =
-  'Get assistance with property document checks, land records, registration procedures and financial documentation from SSS Associate in Coimbatore.';
+  'Get help with property document checks, land records, registration procedures and bank documentation from SSS Associate in Coimbatore, Tamil Nadu.';
 
 const socialImage = `${siteUrl}/images/og-sss-associate.jpg`;
 
@@ -32,9 +32,7 @@ export const metadata: Metadata = {
 
   description: seoDescription,
 
-  alternates: {
-    canonical: '/',
-  },
+  // Canonical is defined separately for each page using pageMetadata().
 
   formatDetection: {
     telephone: false,
@@ -65,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoTitle,
     description: seoDescription,
-    url: siteUrl,
+    url: `${siteUrl}/`,
     siteName: business.shortName,
     locale: 'en_IN',
     type: 'website',
@@ -98,7 +96,6 @@ export default function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  // Preload local fonts for better loading performance.
   preload('/fonts/inter-latin-wght-normal.woff2', {
     as: 'font',
     type: 'font/woff2',

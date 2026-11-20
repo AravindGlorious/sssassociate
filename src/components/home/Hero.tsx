@@ -13,15 +13,15 @@ export function Hero() {
           </p>
 
           <h1 id="hero-title">
-            Reliable Legal &amp; Documentation Support{' '}
+            Property &amp; Document Services{' '}
             <em>Across Tamil Nadu</em>
           </h1>
 
           <p>
-            Get practical assistance with document verification,
-            registration procedures, legal documentation and
-            financial matters. Our team is here to help you
-            understand the process and take the next step.
+            Need help with property records, document checks,
+            registration or bank paperwork? We explain the
+            process, help you understand your options and guide
+            you through the next steps.
           </p>
 
           <div className="cta">

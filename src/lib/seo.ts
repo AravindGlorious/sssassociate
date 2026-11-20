@@ -6,16 +6,13 @@ export const SITE_SUFFIX = ' | SSS Associate';
 
 /**
  * Creates an absolute URL using the primary website domain.
- * Homepage canonical uses the bare domain.
  */
 export const absoluteUrl = (path: string): string => {
   const origin = business.url.replace(/\/+$/, '');
 
-  if (path === '/') {
-    return `${origin}/`;
-  }
+  const cleanPath = path.replace(/^\/+/, '');
 
-  return `${origin}/${path.replace(/^\/+/, '')}`;
+  return cleanPath ? `${origin}/${cleanPath}` : `${origin}/`;
 };
 
 interface PageMeta {
@@ -27,8 +24,7 @@ interface PageMeta {
 }
 
 /**
- * Generates consistent SEO metadata for every page:
- * title, description, canonical, robots, Open Graph and Twitter.
+ * Generates SEO metadata for individual pages.
  */
 export function pageMetadata({
   title,
@@ -40,14 +36,13 @@ export function pageMetadata({
   const full = fullTitle ? title : `${title}${SITE_SUFFIX}`;
 
   const url = absoluteUrl(path);
-
   const imageUrl = absoluteUrl('/images/og-sss-associate.jpg');
 
   const image = {
     url: imageUrl,
     width: 1200,
     height: 630,
-    alt: 'SSS Associate Services – Legal documentation and financial assistance',
+    alt: 'SSS Associate Services – Property documentation and financial services',
   };
 
   return {

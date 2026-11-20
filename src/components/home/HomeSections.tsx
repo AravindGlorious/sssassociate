@@ -1,9 +1,8 @@
+
 import Link from 'next/link';
 import {
   Coins,
   FileSearch,
-  FileText,
-  House,
   Languages,
   MapPin,
   MessageSquareText,
@@ -24,7 +23,7 @@ export function ServicesOverview() {
       id="services"
       eyebrow="What we do"
       title="Our Services"
-      intro="Practical assistance with important documents, registration procedures and financial matters to help you make informed decisions."
+      intro="Explore practical support for property records, registration procedures, important paperwork and financial matters."
     >
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <li>
@@ -33,17 +32,17 @@ export function ServicesOverview() {
             title="Legal Services"
             href={categories.legal.path}
             count={byCategory('legal').length}
-            text="Document review assistance, legal process guidance and support in connecting with qualified advocates when required."
+            text="Understand important documents, review relevant details and connect with qualified advocates when required."
           />
         </li>
 
         <li>
           <CategoryOverviewCard
-            Icon={House}
+            Icon={MapPin}
             title="Land & Registration"
             href={categories.property.path}
             count={byCategory('property').length}
-            text="Assistance with patta, EC, sale deeds, land records and registration procedures."
+            text="Get guidance on patta, EC, sale deeds, land records and property registration procedures."
           />
         </li>
 
@@ -53,7 +52,7 @@ export function ServicesOverview() {
             title="Financial Services"
             href={categories.financial.path}
             count={byCategory('financial').length}
-            text="Support with bank-related paperwork, one-time settlement documentation and loan matters."
+            text="Find help with bank paperwork, one-time settlement documents and loan-related matters."
           />
         </li>
 
@@ -62,7 +61,7 @@ export function ServicesOverview() {
             Icon={Languages}
             title="Documentation & Translation"
             href="/services/legal-document-translation"
-            text="Tamil to English and English to Tamil translation assistance for relevant legal and official documents."
+            text="Translate relevant official and legal documents between Tamil and English."
           />
         </li>
       </ul>
@@ -74,32 +73,32 @@ const why = [
   {
     Icon: FileSearch,
     title: 'Careful Document Review',
-    text: 'We help you understand important details in the documents you share and identify points that may need further attention.',
+    text: 'We help you understand the details in your paperwork and identify points that may need further attention.',
   },
   {
     Icon: Users,
     title: 'Coordinated Support',
-    text: 'We help organise related paperwork and connect you with the appropriate professional support when needed.',
+    text: 'We organise related paperwork and help you connect with the right professional when needed.',
   },
   {
     Icon: MessageSquareText,
-    title: 'Simple Communication',
-    text: 'We explain processes, document requirements and next steps in clear English and Tamil.',
+    title: 'Clear Communication',
+    text: 'We explain processes, required documents and next steps in simple English and Tamil.',
   },
   {
     Icon: ShieldCheck,
     title: 'Honest and Transparent',
-    text: 'We explain our services, fees and limitations clearly. We do not promise guaranteed approvals or outcomes.',
+    text: 'We explain our services, fees and limitations clearly. We never promise guaranteed approvals or outcomes.',
   },
   {
     Icon: MapPin,
-    title: 'Support Across Tamil Nadu',
-    text: 'We assist customers from different cities and towns across Tamil Nadu, depending on the service and requirements.',
+    title: 'Serving Tamil Nadu',
+    text: 'Customers from different cities and towns can contact us. Availability depends on the service and location.',
   },
   {
-    Icon: FileText,
-    title: 'Individual Attention',
-    text: 'We understand your requirement first and help identify the documents and assistance relevant to your situation.',
+    Icon: FileSearch,
+    title: 'Personal Attention',
+    text: 'We first understand your situation and then identify the paperwork and guidance relevant to your needs.',
   },
 ];
 
@@ -110,7 +109,7 @@ export function WhyChoose() {
       tone="mist"
       eyebrow="Why SSS Associate"
       title="Why Work With Us?"
-      intro="Our approach focuses on clear communication, organised paperwork and dependable customer support."
+      intro="We focus on clear communication, organised paperwork and dependable customer care."
     >
       <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {why.map(({ Icon, title, text }) => (
@@ -141,19 +140,19 @@ export function WhyChoose() {
 const steps = [
   {
     title: 'Tell Us What You Need',
-    text: 'Call, send a WhatsApp message or use our enquiry form to explain your requirement.',
+    text: 'Call us, send a WhatsApp message or use the enquiry form to explain your requirement.',
   },
   {
     title: 'Share the Documents',
-    text: 'Provide the available paperwork related to your enquiry so we can understand the matter.',
+    text: 'Send the available paperwork so we can understand your request.',
   },
   {
-    title: 'Understand the Next Steps',
-    text: 'We explain the relevant process, document requirements and when specialist advice may be necessary.',
+    title: 'Review the Next Steps',
+    text: 'We explain the process, required documents and when specialist advice may be needed.',
   },
   {
-    title: 'Get the Agreed Support',
-    text: 'We assist with the agreed documentation and follow-up based on the nature of your request.',
+    title: 'Receive the Agreed Support',
+    text: 'We help with the agreed paperwork and follow-up based on your request.',
   },
 ];
 
@@ -164,7 +163,7 @@ export function HowWeWork() {
       tone="navy"
       eyebrow="Our process"
       title="How We Work"
-      intro="Four simple steps to help you understand and manage your requirements."
+      intro="Here is what to expect when you contact our team."
     >
       <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
@@ -218,7 +217,7 @@ export function AreasWeServe() {
       id="areas"
       eyebrow="Our reach"
       title="Serving Customers Across Tamil Nadu"
-      intro="We provide assistance with document-related requirements, registration procedures and financial paperwork for customers across Tamil Nadu."
+      intro="Customers across Tamil Nadu can contact us about property records, registration procedures and financial paperwork."
     >
       <div className="mx-auto max-w-5xl">
         <div className="rounded-2xl bg-navy p-7 text-center text-white shadow-lg sm:p-10">
@@ -229,12 +228,12 @@ export function AreasWeServe() {
           />
 
           <h3 className="mt-4 font-heading text-2xl font-bold sm:text-3xl">
-            Assistance Across Multiple Cities
+            Support Across Multiple Cities
           </h3>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/75">
-            Contact our team to discuss your requirements and
-            check the availability of assistance in your location.
+            Contact us to discuss your requirement and check whether the
+            requested service is available in your area.
           </p>
         </div>
 
@@ -262,12 +261,12 @@ export function AreasWeServe() {
 
         <div className="mt-9 rounded-xl border border-gray-200 bg-white p-6 text-center sm:p-8">
           <h3 className="font-heading text-xl font-bold text-navy">
-            How Can We Help You?
+            Have a Question?
           </h3>
 
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            Tell us what assistance you need. Our team will
-            explain the available services and the next steps.
+            Tell us what you need. Our team will explain the available options
+            and the next steps.
           </p>
 
           <Link

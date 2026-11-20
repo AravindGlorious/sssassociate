@@ -1,3 +1,4 @@
+
 import { business } from '@/config/business';
 import { services } from '@/data/services';
 import { absoluteUrl } from '@/lib/seo';
@@ -9,7 +10,6 @@ const sameAs = Object.values(business.social).filter(Boolean);
 
 /**
  * Main business entity.
- * Include only accurate and verifiable business information.
  */
 export const organizationSchema = {
   '@context': 'https://schema.org',
@@ -18,8 +18,9 @@ export const organizationSchema = {
 
   name: business.name,
   alternateName: business.shortName,
+
   description:
-    'SSS Associate Services provides assistance with property documentation, document verification, registration procedures and financial paperwork in Coimbatore, Tamil Nadu.',
+    'SSS Associate Services provides property document review, registration process guidance, document translation and bank-related paperwork support in Coimbatore, Tamil Nadu.',
 
   url: `${business.url}/`,
   image: absoluteUrl('/images/og-sss-associate.jpg'),
@@ -31,8 +32,8 @@ export const organizationSchema = {
 
   address: {
     '@type': 'PostalAddress',
-    streetAddress: `${business.address.street}, ${business.address.locality}`,
-    addressLocality: business.address.city,
+    streetAddress: business.address.street,
+    addressLocality: business.address.locality,
     addressRegion: business.address.region,
     postalCode: business.address.postalCode,
     addressCountry: business.address.countryCode,
@@ -88,7 +89,7 @@ export const websiteSchema = {
 };
 
 /**
- * Breadcrumb structured data for individual pages.
+ * Breadcrumb structured data.
  */
 export const breadcrumbSchema = (
   items: { name: string; path: string }[]

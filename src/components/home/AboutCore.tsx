@@ -29,7 +29,7 @@ const core = [
   },
   {
     Icon: FileText,
-    label: ['Documentation &', 'Translation'],
+    label: ['Documents &', 'Translation'],
     href: '/services/legal-document-translation',
   },
 ];
@@ -41,7 +41,7 @@ export function AboutCore() {
         <div className="photo">
           <Image
             src="/images/about.jpg"
-            alt="Legal documents, a model house and scales of justice"
+            alt="Property paperwork, a model house and scales of justice"
             fill
             sizes="(max-width: 900px) 100vw, 40vw"
           />
@@ -51,18 +51,20 @@ export function AboutCore() {
           <p className="kick">About SSS Associate</p>
 
           <h2 id="about-title">
-            Practical Guidance for Legal &amp;{' '}
-            <em>Financial Matters</em>
+            Clear Guidance for Important
+            <em> Property & Financial Matters</em>
           </h2>
 
           <p>
             SSS Associate Services helps individuals and families
-            with important documents, registration procedures and
-            financial matters. We offer assistance with document
-            checks, legal processes, land records and bank-related
-            paperwork. Our focus is on clear communication,
-            dependable support and helping customers understand
-            each step. We serve customers in Coimbatore and Irugur.
+            understand property records, registration procedures
+            and bank-related paperwork. We review documents,
+            explain relevant processes and outline the next steps
+            in simple language. Our aim is to make each stage
+            easier to understand through clear communication
+            and dependable customer care. We are based in Irugur,
+            Coimbatore, and serve customers according to their
+            requirements.
           </p>
 
           <Link href="/about" className="btn btn-sm">

@@ -1,3 +1,15 @@
-export function JsonLd({ data }: { data: object }) {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />;
+
+interface JsonLdProps {
+  data: object;
+}
+
+export function JsonLd({ data }: JsonLdProps) {
+  const json = JSON.stringify(data).replace(/</g, '\\u003c');
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: json }}
+    />
+  );
 }

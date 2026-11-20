@@ -2,7 +2,6 @@
 /**
  * Single source of truth for business information.
  * Only verified business details should be stored here.
- * Add social URLs only after they are confirmed.
  */
 
 const address = {
@@ -18,9 +17,8 @@ const address = {
 const oneLineAddress =
   `${address.street}, ${address.locality}, ${address.city}, ${address.region} – ${address.postalCode}`;
 
-const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://sssassociate.org'
-).replace(/\/+$/, '');
+// Primary website domain. Use this consistently for SEO and canonical URLs.
+const siteUrl = 'https://www.sssassociate.org';
 
 export const business = {
   name: 'SSS ASSOCIATE',
