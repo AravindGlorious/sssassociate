@@ -9,7 +9,7 @@ const address = {
   locality: 'Irugur',
   city: 'Coimbatore',
   region: 'Tamil Nadu',
-  postalCode: '64110',
+  postalCode: '641103',
   country: 'India',
   countryCode: 'IN',
 };
@@ -52,29 +52,11 @@ export const business = {
     instagram: '',
   },
 
+  // Physical business location.
   primaryArea: ['Coimbatore'],
 
-  serviceAreas: [
-    'Chennai',
-    'Tiruchirappalli',
-    'Madurai',
-    'Salem',
-    'Erode',
-    'Tiruppur',
-    'Vellore',
-    'Tirunelveli',
-    'Thoothukudi',
-    'Dindigul',
-    'Nagercoil',
-    'Kanchipuram',
-    'Thanjavur',
-    'Karur',
-    'Cuddalore',
-    'Nagapattinam',
-    'Ramanathapuram',
-    'Sivaganga',
-    'Virudhunagar',
-  ],
+  // Service coverage across the entire state.
+  serviceAreas: ['Tamil Nadu'],
 } as const;
 
 export const whatsappLink = (

@@ -20,7 +20,7 @@ export const organizationSchema = {
   alternateName: business.shortName,
 
   description:
-    'SSS Associate Services provides property document review, registration process guidance, document translation and bank-related paperwork support in Coimbatore, Tamil Nadu.',
+    'SSS Associate Services provides property document review, registration process guidance, document translation and bank-related paperwork support across Tamil Nadu, with its primary business location in Irugur, Coimbatore.',
 
   url: `${business.url}/`,
   image: absoluteUrl('/images/og-sss-associate.jpg'),
@@ -46,12 +46,12 @@ export const organizationSchema = {
     telephone: phone.tel,
     email: business.email,
     contactType: 'customer service',
-    areaServed: 'IN',
+    areaServed: 'Tamil Nadu',
     availableLanguage: ['English', 'Tamil'],
   })),
 
   areaServed: business.serviceAreas.map((name) => ({
-    '@type': 'Place',
+    '@type': 'AdministrativeArea',
     name,
   })),
 
@@ -186,13 +186,17 @@ export const blogPostingSchema = ({
     author: {
       '@type': author.type,
       name: author.name,
-      ...(author.url ? { url: absoluteUrl(author.url) } : {}),
+      ...(author.url
+        ? { url: new URL(author.url, business.url).toString() }
+        : {}),
     },
 
     publisher: {
       '@id': businessId,
     },
 
-    ...(image ? { image: absoluteUrl(image) } : {}),
+    ...(image
+      ? { image: new URL(image, business.url).toString() }
+      : {}),
   };
 };
