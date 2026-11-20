@@ -15,7 +15,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 const siteUrl = business.url.replace(/\/+$/, '');
 
 const seoTitle =
-  'Property Document & Registration Support in Coimbatore | SSS Associate';
+  'Property Document Support in Tamil Nadu | SSS Associate';
 
 const seoDescription =
   'Get help with property document checks, land records, registration procedures and bank documentation from SSS Associate in Coimbatore, Tamil Nadu.';
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
   description: seoDescription,
 
-  // Canonical is defined separately for each page using pageMetadata().
+  // Each page defines its own canonical URL using pageMetadata().
 
   formatDetection: {
     telephone: false,
