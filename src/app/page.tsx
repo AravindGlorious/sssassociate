@@ -25,7 +25,7 @@ import { PageSchema } from '@/components/seo/PageSchema';
 import { pageMetadata } from '@/lib/seo';
 
 const description =
-  'SSS Associate Services helps people across Tamil Nadu with property records, document checks, registration procedures and bank settlement paperwork. Contact our team to discuss your needs.';
+  'SSS Associate Services offers property document checks, registration guidance and bank documentation support across Tamil Nadu. Contact us for assistance.';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Property Documents & Registration Support in Tamil Nadu | SSS Associate',
