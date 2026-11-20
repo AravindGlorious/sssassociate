@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { preload } from 'react-dom';
 import './globals.css';
+
 import { business } from '@/config/business';
 import { organizationSchema, websiteSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
@@ -11,16 +12,18 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
-const siteUrl = 'https://www.sssassociate.org';
+const siteUrl = business.url.replace(/\/+$/, '');
 
 const seoTitle =
-  'Property & Legal Services in Coimbatore | SSS Associate';
+  'Legal & Documentation Services in Coimbatore | SSS Associate';
 
 const seoDescription =
-  'SSS Associate Services in Coimbatore offers property document verification, legal opinions, patta transfer, registration and financial settlement support.';
+  'Get assistance with property document checks, land records, registration procedures and financial documentation from SSS Associate in Coimbatore.';
+
+const socialImage = `${siteUrl}/images/og-sss-associate.jpg`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(`${siteUrl}/`),
 
   title: {
     default: seoTitle,
@@ -42,6 +45,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 
   ...(process.env.GOOGLE_SITE_VERIFICATION
@@ -59,12 +69,21 @@ export const metadata: Metadata = {
     siteName: business.shortName,
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: socialImage,
+        width: 1200,
+        height: 630,
+        alt: 'SSS Associate Services',
+      },
+    ],
   },
 
   twitter: {
     card: 'summary_large_image',
     title: seoTitle,
     description: seoDescription,
+    images: [socialImage],
   },
 };
 
@@ -79,7 +98,7 @@ export default function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  // Preload fonts for better loading performance.
+  // Preload local fonts for better loading performance.
   preload('/fonts/inter-latin-wght-normal.woff2', {
     as: 'font',
     type: 'font/woff2',

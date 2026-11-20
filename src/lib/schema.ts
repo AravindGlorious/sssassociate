@@ -2,24 +2,33 @@ import { business } from '@/config/business';
 import { services } from '@/data/services';
 import { absoluteUrl } from '@/lib/seo';
 
+const businessId = `${business.url}/#business`;
+const websiteId = `${business.url}/#website`;
+
 const sameAs = Object.values(business.social).filter(Boolean);
 
 /**
- * The one business entity for the whole site. Every page references it by @id.
- * Only verified facts are included: no ratings, reviews, prices, opening hours or coordinates.
+ * Main business entity.
+ * Include only accurate and verifiable business information.
  */
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  '@id': `${business.url}/#business`,
+  '@id': businessId,
+
   name: business.name,
   alternateName: business.shortName,
-  description: `${business.tagline} in ${business.primaryArea}, Tamil Nadu: property documentation, legal opinions through qualified advocates, and financial settlement assistance.`,
+  description:
+    'SSS Associate Services provides assistance with property documentation, document verification, registration procedures and financial paperwork in Coimbatore, Tamil Nadu.',
+
   url: `${business.url}/`,
   image: absoluteUrl('/images/og-sss-associate.jpg'),
   logo: absoluteUrl('/images/logo.jpg'),
+
   email: business.email,
-  telephone: business.phones.map((p) => p.tel),
+
+  telephone: business.phones.map((phone) => phone.tel),
+
   address: {
     '@type': 'PostalAddress',
     streetAddress: `${business.address.street}, ${business.address.locality}`,
@@ -28,43 +37,102 @@ export const organizationSchema = {
     postalCode: business.address.postalCode,
     addressCountry: business.address.countryCode,
   },
+
   hasMap: business.mapsUrl,
-  contactPoint: business.phones.map((p) => ({ '@type': 'ContactPoint', telephone: p.tel, email: business.email, contactType: 'customer service', areaServed: 'IN', availableLanguage: ['English', 'Tamil'] })),
-  areaServed: business.serviceAreas.map((name) => ({ '@type': 'Place', name })),
+
+  contactPoint: business.phones.map((phone) => ({
+    '@type': 'ContactPoint',
+    telephone: phone.tel,
+    email: business.email,
+    contactType: 'customer service',
+    areaServed: 'IN',
+    availableLanguage: ['English', 'Tamil'],
+  })),
+
+  areaServed: business.serviceAreas.map((name) => ({
+    '@type': 'Place',
+    name,
+  })),
+
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: `${business.shortName} services`,
-    itemListElement: services.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.title, url: absoluteUrl(`/services/${s.slug}`) } })),
+    name: `${business.shortName} Services`,
+    itemListElement: services.map((service) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: service.title,
+        url: absoluteUrl(`/services/${service.slug}`),
+      },
+    })),
   },
-  ...(sameAs.length ? { sameAs } : {}),
+
+  ...(sameAs.length > 0 ? { sameAs } : {}),
 };
 
+/**
+ * Website entity connected to the main business entity.
+ */
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': `${business.url}/#website`,
+  '@id': websiteId,
+
   url: `${business.url}/`,
   name: business.shortName,
   inLanguage: 'en-IN',
-  publisher: { '@id': `${business.url}/#business` },
+
+  publisher: {
+    '@id': businessId,
+  },
 };
 
-export const breadcrumbSchema = (items: { name: string; path: string }[]) => ({
+/**
+ * Breadcrumb structured data for individual pages.
+ */
+export const breadcrumbSchema = (
+  items: { name: string; path: string }[]
+) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, item: absoluteUrl(it.path) })),
+
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: absoluteUrl(item.path),
+  })),
 });
 
-type PageType = 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage';
+type PageType =
+  | 'WebPage'
+  | 'AboutPage'
+  | 'ContactPage'
+  | 'CollectionPage';
 
-export const webPageSchema = (type: PageType, name: string, description: string, path: string) => ({
+/**
+ * Page-level structured data.
+ */
+export const webPageSchema = (
+  type: PageType,
+  name: string,
+  description: string,
+  path: string
+) => ({
   '@context': 'https://schema.org',
   '@type': type,
+
   '@id': `${absoluteUrl(path)}#webpage`,
   url: absoluteUrl(path),
   name,
   description,
   inLanguage: 'en-IN',
-  isPartOf: { '@id': `${business.url}/#website` },
-  about: { '@id': `${business.url}/#business` },
+
+  isPartOf: {
+    '@id': websiteId,
+  },
+
+  about: {
+    '@id': businessId,
+  },
 });
