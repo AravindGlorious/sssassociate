@@ -15,7 +15,7 @@ export default function AboutPage() {
       <PageSchema type="AboutPage" name="About SSS Associate" description={description} path="/about" crumbs={[{ name: 'About Us', path: '/about' }]} />
       <PageHero title="About SSS Associate" intro="Practical help with the legal, property and financial paperwork that matters most to you." crumbs={[{ label: 'About Us' }]} />
       <section className="wrap grid items-center gap-10 py-16 md:grid-cols-2" aria-labelledby="who">
-        <div className="relative aspect-[800/404] overflow-hidden rounded-2xl shadow-xl"><Image src="/images/about.jpg" alt="Signing a property document beside a model house and scales" fill sizes="(max-width: 768px) 100vw, 50vw" /></div>
+        <div className="relative aspect-[800/404] overflow-hidden rounded-2xl shadow-xl"><Image src="/images/sss-associate-property-documentation.jpg" alt="Signing a property document beside a model house and scales" fill sizes="(max-width: 768px) 100vw, 50vw" /></div>
         <div className="space-y-4 leading-relaxed">
           <h2 id="who" className="text-3xl font-bold text-navy">Who we are</h2>
           <p>SSS Associate is based in {business.address.locality}, {business.address.city}. We assist with property documentation, legal opinions, registration support and financial settlement matters, from first review to follow-through.</p>

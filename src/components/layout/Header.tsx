@@ -18,7 +18,7 @@ export function Header() {
     <header className="site-header">
       <div className="wrap">
         <Link href="/" className="brand" aria-label={`${business.shortName} home`}>
-          <Image src="/images/logo.jpg" alt="" width={100} height={94} />
+          <Image src="/images/sss-associate-services-logo.jpg" alt="" width={100} height={94} />
           <span>
             <b>{business.name}</b>
             <small>{business.tagline}</small>

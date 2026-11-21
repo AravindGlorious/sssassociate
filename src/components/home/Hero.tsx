@@ -39,11 +39,13 @@ export function Hero() {
 
         <div className="pic">
           <Image
-            src="/images/hero.jpg"
+            src="/images/property-document-services-tamil-nadu.jpg"
             alt="House with legal books, a gavel and scales of justice"
-            fill
+            width={1600}
+            height={900}
             preload
             sizes="(max-width: 900px) 100vw, 50vw"
+            className="hero-image"
           />
         </div>
       </div>

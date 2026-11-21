@@ -40,10 +40,12 @@ export function AboutCore() {
       <div className="wrap">
         <div className="photo">
           <Image
-            src="/images/about.jpg"
+            src="/images/sss-associate-property-documentation.jpg"
             alt="Property paperwork, a model house and scales of justice"
-            fill
+            width={800}
+            height={404}
             sizes="(max-width: 900px) 100vw, 40vw"
+            className="h-full w-full object-cover"
           />
         </div>
 

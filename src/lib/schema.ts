@@ -24,7 +24,7 @@ export const organizationSchema = {
 
   url: `${business.url}/`,
   image: absoluteUrl('/images/og-sss-associate.jpg'),
-  logo: absoluteUrl('/images/logo.jpg'),
+  logo: absoluteUrl('/images/sss-associate-services-logo.jpg'),
 
   email: business.email,
 
