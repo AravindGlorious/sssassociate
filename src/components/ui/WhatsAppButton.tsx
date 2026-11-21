@@ -8,12 +8,14 @@ export function WhatsAppButton() {
       href={whatsappLink()}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Send an enquiry to SSS Associate on WhatsApp"
+      aria-label="Chat with SSS Associate through WhatsApp"
     >
       <span>Chat with Us on WhatsApp</span>
 
       <svg
         viewBox="0 0 24 24"
+        width="24"
+        height="24"
         aria-hidden="true"
         focusable="false"
       >
