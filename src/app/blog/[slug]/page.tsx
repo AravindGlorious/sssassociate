@@ -1,5 +1,5 @@
-
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 import { PageHero } from '@/components/layout/PageHero';
@@ -131,6 +131,18 @@ export default async function BlogArticlePage({ params }: Props) {
 
       <article className="bg-white py-12 sm:py-16">
         <div className="wrap max-w-4xl">
+
+          {/* Optimized responsive blog image */}
+          <Image
+            src="/images/blog/property-legal-verification.webp"
+            alt="Property document verification with title deed, encumbrance certificate, patta and land survey records"
+            width={1600}
+            height={900}
+            sizes="(max-width: 768px) 100vw, 896px"
+            preload
+            className="mb-8 h-auto w-full rounded-2xl object-cover"
+          />
+
           <div className="mb-8 border-b border-navy/10 pb-6">
             <p className="text-sm font-semibold uppercase tracking-wider text-gold-text">
               {post.category}
