@@ -141,6 +141,7 @@ export const webPageSchema = (
 /**
  * Blog article structured data.
  */
+
 interface BlogPostingSchemaProps {
   title: string;
   description: string;
@@ -165,23 +166,24 @@ export const blogPostingSchema = ({
   image,
 }: BlogPostingSchemaProps) => {
   const articleUrl = absoluteUrl(path);
+  const webpageId = `${articleUrl}#webpage`;
 
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
 
     '@id': `${articleUrl}#article`,
+
     mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': articleUrl,
+      '@id': webpageId,
     },
 
     headline: title,
     description,
     inLanguage: 'en-IN',
-
     datePublished: publishedAt,
-    dateModified: updatedAt || publishedAt,
+
+    ...(updatedAt ? { dateModified: updatedAt } : {}),
 
     author: {
       '@type': author.type,
@@ -195,8 +197,6 @@ export const blogPostingSchema = ({
       '@id': businessId,
     },
 
-    ...(image
-      ? { image: new URL(image, business.url).toString() }
-      : {}),
+    ...(image ? { image: absoluteUrl(image) } : {}),
   };
 };

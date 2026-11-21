@@ -23,7 +23,6 @@ const AGRICULTURAL_ARTICLE_SLUG =
 const articleDetails: Record<
   string,
   {
-    title: string;
     description: string;
     intro: string;
     image: string;
@@ -31,7 +30,6 @@ const articleDetails: Record<
   }
 > = {
   [PROPERTY_ARTICLE_SLUG]: {
-    title: 'Why Property Legal Verification Matters Before Buying Land',
     description:
       'Learn which property documents to check before buying land in Tamil Nadu, including title deeds, EC, patta, survey records and land classification.',
     intro:
@@ -42,7 +40,6 @@ const articleDetails: Record<
   },
 
   [AGRICULTURAL_ARTICLE_SLUG]: {
-    title: 'Documents to Check Before Buying Agricultural Land in Tamil Nadu',
     description:
       'Planning to buy agricultural land in Tamil Nadu? Learn which documents to verify, including Patta, Chitta, A-Register, Adangal, FMB, EC and parent deeds.',
     intro:
@@ -52,6 +49,21 @@ const articleDetails: Record<
       'Agricultural land in Tamil Nadu with land survey and property documentation records',
   },
 };
+
+/**
+ * Format date-only values using the India timezone.
+ * This avoids dates shifting to the previous day.
+ */
+function formatArticleDate(value: string) {
+  const date = new Date(`${value.slice(0, 10)}T00:00:00+05:30`);
+
+  return new Intl.DateTimeFormat('en-IN', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'Asia/Kolkata',
+  }).format(date);
+}
 
 export const dynamicParams = false;
 
@@ -65,6 +77,9 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+/**
+ * SEO metadata for each published article.
+ */
 export async function generateMetadata({
   params,
 }: Props): Promise<Metadata> {
@@ -82,7 +97,9 @@ export async function generateMetadata({
     });
   }
 
-  const { title, description } = details;
+  // Use blog.ts as the single source of truth for the article title.
+  const title = post.title;
+  const { description } = details;
 
   const baseMetadata = pageMetadata({
     title,
@@ -93,6 +110,7 @@ export async function generateMetadata({
 
   return {
     ...baseMetadata,
+
     openGraph: {
       type: 'article',
       title,
@@ -100,22 +118,35 @@ export async function generateMetadata({
       url: absoluteUrl(`/blog/${slug}`),
       siteName: business.shortName,
       locale: 'en_IN',
+
       publishedTime: post.publishedAt,
+
       ...(post.updatedAt
         ? { modifiedTime: post.updatedAt }
         : {}),
+
       images: [
         {
           url: absoluteUrl(details.image),
-          width: 1600,
-          height: 900,
+          width: 1280,
+          height: 720,
           alt: details.imageAlt,
         },
       ],
     },
+
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [absoluteUrl(details.image)],
+    },
   };
 }
 
+/**
+ * Published blog article page.
+ */
 export default async function BlogArticlePage({ params }: Props) {
   const { slug } = await params;
 
@@ -126,12 +157,20 @@ export default async function BlogArticlePage({ params }: Props) {
     notFound();
   }
 
+  const articlePath = `/blog/${post.slug}`;
+
+  /**
+   * BlogPosting structured data.
+   * Uses the same title and image as the visible article.
+   */
   const articleSchema = blogPostingSchema({
     title: post.title,
     description: details.description,
-    path: `/blog/${post.slug}`,
+    path: articlePath,
     publishedAt: post.publishedAt,
     updatedAt: post.updatedAt,
+    image: absoluteUrl(details.image),
+
     author: {
       name: post.author.name,
       type: 'Organization',
@@ -144,10 +183,10 @@ export default async function BlogArticlePage({ params }: Props) {
         type="WebPage"
         name={post.title}
         description={details.description}
-        path={`/blog/${post.slug}`}
+        path={articlePath}
         crumbs={[
           { name: 'Blog', path: '/blog' },
-          { name: post.title, path: `/blog/${post.slug}` },
+          { name: post.title, path: articlePath },
         ]}
       />
 
@@ -168,13 +207,14 @@ export default async function BlogArticlePage({ params }: Props) {
           <Image
             src={details.image}
             alt={details.imageAlt}
-            width={1600}
-            height={900}
+            width={1280}
+            height={720}
             sizes="(max-width: 768px) 100vw, 896px"
             preload
             className="mb-8 h-auto w-full rounded-2xl object-cover"
           />
 
+          {/* Article information */}
           <div className="mb-8 border-b border-navy/10 pb-6">
             <p className="text-sm font-semibold uppercase tracking-wider text-gold-text">
               {post.category}
@@ -187,11 +227,7 @@ export default async function BlogArticlePage({ params }: Props) {
             <p className="mt-1 text-xs text-muted">
               Published:{' '}
               <time dateTime={post.publishedAt}>
-                {new Intl.DateTimeFormat('en-IN', {
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric',
-                }).format(new Date(post.publishedAt))}
+                {formatArticleDate(post.publishedAt)}
               </time>
             </p>
 
@@ -199,16 +235,13 @@ export default async function BlogArticlePage({ params }: Props) {
               <p className="mt-1 text-xs text-muted">
                 Updated:{' '}
                 <time dateTime={post.updatedAt}>
-                  {new Intl.DateTimeFormat('en-IN', {
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric',
-                  }).format(new Date(post.updatedAt))}
+                  {formatArticleDate(post.updatedAt)}
                 </time>
               </p>
             )}
           </div>
 
+          {/* First article */}
           {slug === PROPERTY_ARTICLE_SLUG ? (
             <>
               <div className="space-y-6 text-base leading-8 text-muted">
@@ -537,6 +570,7 @@ export default async function BlogArticlePage({ params }: Props) {
                       Tamil Nadu Government Land e-Services
                     </a>
                   </li>
+
                   <li>
                     <a
                       href="https://tnreginet.gov.in/portal/"
@@ -547,6 +581,7 @@ export default async function BlogArticlePage({ params }: Props) {
                       Tamil Nadu Registration Department (TNREGINET)
                     </a>
                   </li>
+
                   <li>
                     <a
                       href="https://www.indiacode.nic.in/"
