@@ -27,11 +27,14 @@ export const editorialAuthor = {
 export const blogTeasers: BlogTeaser[] = [
   
 {
-   slug: 'property-legal-verification-before-buying-land',
+  slug: 'property-legal-verification-before-buying-land',
   title: 'Why Property Legal Verification Is Important Before Buying Land',
   category: 'Property Verification',
   excerpt:
     'What a document review looks for, and why it is worth doing before any advance is paid.',
+  published: true,
+  author: editorialAuthor,
+  publishedAt: '2026-11-21',
 },
   {
     slug: 'documents-to-check-before-buying-agricultural-land',
