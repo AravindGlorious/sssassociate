@@ -25,23 +25,25 @@ export const editorialAuthor = {
 };
 
 export const blogTeasers: BlogTeaser[] = [
-  
-{
-  slug: 'property-legal-verification-before-buying-land',
-  title: 'Why Property Legal Verification Is Important Before Buying Land',
-  category: 'Property Verification',
-  excerpt:
-    'What a document review looks for, and why it is worth doing before any advance is paid.',
-  published: true,
-  author: editorialAuthor,
-  publishedAt: '2026-11-21',
-},
+  {
+    slug: 'property-legal-verification-before-buying-land',
+    title: 'Why Property Legal Verification Is Important Before Buying Land',
+    category: 'Property Verification',
+    excerpt:
+      'What a document review looks for, and why it is worth doing before any advance is paid.',
+    published: true,
+    author: editorialAuthor,
+    publishedAt: '2026-11-21',
+  },
   {
     slug: 'documents-to-check-before-buying-agricultural-land',
-    title: 'Documents to Check Before Purchasing Agricultural Land',
+    title: 'Documents to Check Before Buying Agricultural Land in Tamil Nadu',
     category: 'Land Documentation',
     excerpt:
-      'A practical overview of the land records buyers commonly ask to see.',
+      'Understand the important land records, ownership documents and verification steps to review before purchasing agricultural land in Tamil Nadu.',
+    published: true,
+    author: editorialAuthor,
+    publishedAt: '2026-11-21',
   },
   {
     slug: 'what-is-an-encumbrance-certificate',
