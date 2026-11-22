@@ -23,7 +23,7 @@ export function Header() {
             alt="SSS Associate Services logo"
             width={100}
             height={94}
-            loading="eager"
+            priority
           />
           <span>
             <b>{business.name}</b>
