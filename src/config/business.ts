@@ -48,7 +48,7 @@ export const business = {
   )}`,
 
   social: {
-    facebook: '',
+    facebook: 'https://www.facebook.com/sundaramsuresh.sundaramsuresh',
     instagram: '',
   },
 
