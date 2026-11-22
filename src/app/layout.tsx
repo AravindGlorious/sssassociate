@@ -1,4 +1,3 @@
-
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { preload } from 'react-dom';
@@ -113,6 +112,7 @@ export default function RootLayout({
       <head>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
       </head>
 
       <body>
