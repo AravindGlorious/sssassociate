@@ -42,8 +42,7 @@ export function Hero() {
             alt="House with legal books, a gavel and scales of justice"
             width={1600}
             height={900}
-            preload
-            fetchPriority="high"
+            priority
             sizes="(max-width: 900px) 100vw, 50vw"
             className="hero-image"
           />
