@@ -49,7 +49,7 @@ export const business = {
 
   social: {
     facebook: 'https://www.facebook.com/sundaramsuresh.sundaramsuresh',
-    instagram: '',
+    instagram: 'https://www.instagram.com/sssassociatecbe/',
   },
 
   // Physical business location.
