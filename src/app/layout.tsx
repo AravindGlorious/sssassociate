@@ -18,7 +18,7 @@ const seoTitle =
   'Property Document Support in Tamil Nadu | SSS Associate';
 
 const seoDescription =
-  'Get help with property document checks, land records, registration procedures and bank documentation from SSS Associate in Coimbatore, Tamil Nadu.';
+  'Property document checks, land records and registration support in Coimbatore and across Tamil Nadu. Contact SSS Associate Services.';
 
 const socialImage = `${siteUrl}/images/og-sss-associate.jpg`;
 
