@@ -49,9 +49,9 @@ export function BlogCard({ post }: { post: BlogTeaser }) {
                   className="mt-0.5 shrink-0"
                   aria-hidden="true"
                 />
-                <div>
+                <div className="not-italic">
                   <p className="font-semibold text-navy">
-                    {post.author.name}
+                    By {post.author.name}
                   </p>
                   <p>{post.author.role}</p>
                 </div>

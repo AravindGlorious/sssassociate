@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
@@ -102,7 +101,7 @@ export function Footer() {
                 className="inline-block py-1 hover:text-gold-light"
                 href={business.mapsUrl}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 aria-label="View SSS Associate office location on Google Maps"
               >
                 {a.street},<br />
