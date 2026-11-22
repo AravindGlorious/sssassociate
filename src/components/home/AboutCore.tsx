@@ -18,7 +18,7 @@ const core = [
   },
   {
     Icon: House,
-    label: ['Land &', 'Registration'],
+    label: ['Property &', 'Registration'],
     href: categories.property.path,
   },
   {
@@ -57,11 +57,11 @@ export function AboutCore() {
           </h2>
 
           <p>
-            SSS Associate Services helps families review land
-            records, registration steps, and bank files. We
+            SSS Associate Services helps families review property
+            papers, registration steps, and bank files. We
             explain each step in plain words and share clear
             next options. Based in Irugur, Coimbatore, our team
-            supports clients across Tamil Nadu with care.
+            supports clients across the region with care.
           </p>
 
           <Link href="/about" className="btn btn-sm">

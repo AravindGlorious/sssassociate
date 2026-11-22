@@ -22,7 +22,7 @@ export function ServicesOverview() {
       id="services"
       eyebrow="What we do"
       title="Our Services"
-      intro="Get clear help with land records, registration steps, key documents, and bank files."
+      intro="Get clear help with property documents, registration steps, key deeds, and bank files."
     >
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <li>
@@ -31,17 +31,17 @@ export function ServicesOverview() {
             title="Legal Services"
             href={categories.legal.path}
             count={byCategory('legal').length}
-            text="Review key deeds and records. We connect you with qualified advocates when needed."
+            text="Review key deeds and title papers. We connect you with qualified advocates when needed."
           />
         </li>
 
         <li>
           <CategoryOverviewCard
             Icon={MapPin}
-            title="Land & Registration"
+            title="Property & Registration"
             href={categories.property.path}
             count={byCategory('property').length}
-            text="Get guidance on patta, EC, sale deeds, land records, and registration steps."
+            text="Get guidance on patta, EC, sale deeds, property papers, and registration steps."
           />
         </li>
 
@@ -51,7 +51,7 @@ export function ServicesOverview() {
             title="Financial Services"
             href={categories.financial.path}
             count={byCategory('financial').length}
-            text="Get help with bank files, one-time settlement forms, and loan records."
+            text="Get help with bank files, one-time settlement forms, and loan papers."
           />
         </li>
 
@@ -72,7 +72,7 @@ const why = [
   {
     Icon: FileSearch,
     title: 'Careful Document Review',
-    text: 'We check your records clearly and point out items that need closer review.',
+    text: 'We check your papers clearly and point out items that need closer review.',
   },
   {
     Icon: Users,
@@ -82,7 +82,7 @@ const why = [
   {
     Icon: MessageSquareText,
     title: 'Clear Communication',
-    text: 'We explain each step and required file in plain English and Tamil.',
+    text: 'We explain each step and needed file in plain English and Tamil.',
   },
   {
     Icon: ShieldCheck,
@@ -91,13 +91,13 @@ const why = [
   },
   {
     Icon: MapPin,
-    title: 'Serving Tamil Nadu',
+    title: 'Serving Across the State',
     text: 'Clients across cities and towns can reach us. Service scope depends on location.',
   },
   {
     Icon: FileSearch,
     title: 'Personal Attention',
-    text: 'We listen to your case first, then suggest the right records and next steps.',
+    text: 'We listen to your case first, then suggest the right documents and next steps.',
   },
 ];
 
@@ -143,7 +143,7 @@ const steps = [
   },
   {
     title: 'Share the Documents',
-    text: 'Send copies of available records so we can review your request.',
+    text: 'Send copies of available papers so we can review your request.',
   },
   {
     title: 'Review the Next Steps',
@@ -216,7 +216,7 @@ export function AreasWeServe() {
       id="areas"
       eyebrow="Our reach"
       title="Serving Customers Across Tamil Nadu"
-      intro="Clients across Tamil Nadu can contact us for land records, registration steps, and bank files."
+      intro="Clients across Coimbatore and nearby districts can contact us for property papers, registration steps, and bank files."
     >
       <div className="mx-auto max-w-5xl">
         <div className="rounded-2xl bg-navy p-7 text-center text-white shadow-lg sm:p-10">
