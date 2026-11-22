@@ -2,7 +2,7 @@ import { LegalDoc } from '@/components/layout/LegalDoc';
 import { pageMetadata } from '@/lib/seo';
 import { PageSchema } from '@/components/seo/PageSchema';
 
-const description = 'Important limits on SSS Associate’s information and services: no guaranteed outcomes, opinions only through qualified advocates, requirements set case by case.';
+const description = 'Read the SSS Associate disclaimer covering general information, advocate-led legal opinions, service limits and outcomes that cannot be guaranteed.';
 export const metadata = pageMetadata({ title: 'Legal Disclaimer | SSS Associate', description, path: '/disclaimer', fullTitle: true });
 
 export default function Page() {

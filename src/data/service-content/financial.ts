@@ -3,8 +3,8 @@ import type { ServiceContent } from './types';
 export const financialContent: ServiceContent[] = [
   {
     slug: 'financial-opinion',
-    metaTitle: 'Financial Opinion Services in Coimbatore',
-    metaDescription: 'Financial opinion services in Coimbatore for property, loan and settlement decisions. A structured view of your options, not investment advice.',
+    metaTitle: 'Financial Opinion and Guidance in Coimbatore',
+    metaDescription: 'Understand property, loan and settlement-related financial options with organised document support in Coimbatore. Not investment advice.',
     h1: 'Financial Opinion for Property and Loan Decisions in Coimbatore',
     tagline: 'Think through the money side of a property or loan decision before you commit.',
     imageAlt: 'Illustration of a rising chart, coins and document representing a financial opinion',
@@ -37,8 +37,8 @@ export const financialContent: ServiceContent[] = [
   },
   {
     slug: 'bank-litigation-settlement',
-    metaTitle: 'Bank Litigation & Settlement in Coimbatore',
-    metaDescription: 'Bank litigation and settlement support in Coimbatore: organised help with notices and disputes. Advocates represent you; lenders decide settlements.',
+    metaTitle: 'Bank Dispute and Settlement Support in Coimbatore',
+    metaDescription: 'Get help organising bank notices and loan dispute documents in Coimbatore. Advocates handle legal representation; lenders decide settlements.',
     h1: 'Bank Litigation and Settlement Support in Coimbatore',
     tagline: 'Organised help when a dispute with a bank or lender is heading to, or already in, legal proceedings.',
     imageAlt: 'Illustration of a bank building, gavel and handshake representing bank litigation and settlement',
@@ -71,8 +71,8 @@ export const financialContent: ServiceContent[] = [
   },
   {
     slug: 'one-time-settlement',
-    metaTitle: 'One Time Settlement (OTS) in Coimbatore',
-    metaDescription: 'One Time Settlement (OTS) assistance in Coimbatore: prepare documents and a clear proposal for your lender. Approval rests with the lender.',
+    metaTitle: 'One Time Settlement (OTS) Assistance in Coimbatore',
+    metaDescription: 'Get help preparing documents and an OTS proposal for your lender in Coimbatore. Settlement approval is decided by the lender.',
     h1: 'One Time Settlement (OTS) Assistance in Coimbatore',
     tagline: 'Prepare a clear, documented approach to your lender about settling a loan account.',
     imageAlt: 'Illustration of a rupee symbol, handshake and signed paper representing a one time settlement',
@@ -105,8 +105,8 @@ export const financialContent: ServiceContent[] = [
   },
   {
     slug: 'private-bank-loan-assistance',
-    metaTitle: 'Bank & Private Loan Assistance in Coimbatore',
-    metaDescription: 'Bank and private loan assistance in Coimbatore: organise property and identity documents and understand terms. Approval is the lender’s decision.',
+    metaTitle: 'Bank and Private Loan Documentation Assistance',
+    metaDescription: 'Get help organising property and identity documents and understanding loan paperwork in Coimbatore. Loan approval rests with the lender.',
     h1: 'Private and Bank Loan Assistance in Coimbatore',
     tagline: 'Get your documents organised and understand the process before you apply.',
     imageAlt: 'Illustration of banknotes, a form and a bank building representing loan assistance',

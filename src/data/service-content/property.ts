@@ -3,8 +3,8 @@ import type { ServiceContent } from './types';
 export const propertyContent: ServiceContent[] = [
   {
     slug: 'property-opinion',
-    metaTitle: 'Property Opinion Services in Coimbatore',
-    metaDescription: 'Property opinion in Coimbatore: a document-based review by a qualified advocate before you buy, sell or lend against a property. Irugur-based support.',
+    metaTitle: 'Property Legal Opinion in Coimbatore',
+    metaDescription: 'Get property documents reviewed by a qualified advocate before you buy, sell or mortgage land or a building. Assistance in Coimbatore.',
     h1: 'Property Opinion Before You Buy, Sell or Lend in Coimbatore',
     tagline: 'A document-based review of a property so you can decide with the full picture.',
     imageAlt: 'Illustration of a building, magnifier and shield representing a property opinion',
@@ -37,8 +37,8 @@ export const propertyContent: ServiceContent[] = [
   },
   {
     slug: 'property-registration',
-    metaTitle: 'Property Registration Services in Coimbatore',
-    metaDescription: 'Property registration assistance in Irugur, Coimbatore: document checks, preparation and coordination. Fees and requirements are confirmed for each case.',
+    metaTitle: 'Property Registration Assistance in Coimbatore',
+    metaDescription: 'Get help organising property registration documents, checking details and coordinating the process in Coimbatore. Requirements vary by case.',
     h1: 'Property Registration Assistance in Irugur, Coimbatore',
     tagline: 'Prepare properly for registration so the day itself goes as smoothly as it can.',
     imageAlt: 'Illustration of a stamp, house and signed deed representing property registration',
@@ -71,8 +71,8 @@ export const propertyContent: ServiceContent[] = [
   },
   {
     slug: 'patta-transfer-registration',
-    metaTitle: 'Patta Transfer Services in Coimbatore',
-    metaDescription: 'Patta transfer and registration help in Coimbatore after a sale, inheritance or partition. Procedures and documents are confirmed for each case.',
+    metaTitle: 'Patta Transfer Assistance in Coimbatore',
+    metaDescription: 'Need a patta transfer after a sale, inheritance or partition? Get help preparing documents and following the application process in Coimbatore.',
     h1: 'Patta Transfer and Patta Registration Help in Coimbatore',
     tagline: 'Get the revenue record to reflect who now holds the land.',
     imageAlt: 'Illustration of a spreadsheet-like land record with a key and arrows representing patta transfer',
@@ -105,8 +105,8 @@ export const propertyContent: ServiceContent[] = [
   },
   {
     slug: 'sale-deed-preparation-verification',
-    metaTitle: 'Sale Deed Preparation in Coimbatore',
-    metaDescription: 'Sale deed preparation and verification in Coimbatore: details gathered, cross-checked with title papers and settled with a qualified advocate.',
+    metaTitle: 'Sale Deed Preparation & Verification in Coimbatore',
+    metaDescription: 'Get assistance organising sale deed details and checking them against property records, with qualified advocate coordination in Coimbatore.',
     h1: 'Sale Deed Preparation and Verification in Coimbatore',
     tagline: 'Make sure the deed says what you agreed, and that it can stand on the papers behind it.',
     imageAlt: 'Illustration of a deed being signed beside a house and stamp representing sale deed preparation',
@@ -139,8 +139,8 @@ export const propertyContent: ServiceContent[] = [
   },
   {
     slug: 'encumbrance-certificate',
-    metaTitle: 'Encumbrance Certificate (EC) in Coimbatore',
-    metaDescription: 'Encumbrance Certificate (EC) assistance in Coimbatore: help applying for and reading an EC for your property, with Irugur-based support.',
+    metaTitle: 'Encumbrance Certificate (EC) Assistance in Coimbatore',
+    metaDescription: 'Get help applying for and understanding an Encumbrance Certificate (EC) for your property in Coimbatore. Requirements depend on the case.',
     h1: 'Encumbrance Certificate (EC) Services in Coimbatore',
     tagline: 'Know what has been registered against a property over the period you need.',
     imageAlt: 'Illustration of a shield and document with a magnifier representing an Encumbrance Certificate',
@@ -173,8 +173,8 @@ export const propertyContent: ServiceContent[] = [
   },
   {
     slug: 'patta-chitta-services',
-    metaTitle: 'Patta & Chitta Services in Coimbatore',
-    metaDescription: 'Patta and chitta services in Coimbatore: obtain land record extracts and check that they match your deeds before a sale, loan or transfer.',
+    metaTitle: 'Patta and Chitta Services in Coimbatore',
+    metaDescription: 'Get assistance with patta and chitta land records and checking details against your property deeds in Coimbatore.',
     h1: 'Patta and Chitta Services in Irugur, Coimbatore',
     tagline: 'Get the revenue records for your land and check that they match your deeds.',
     imageAlt: 'Illustration of a record sheet, map and ruler representing patta and chitta extracts',
@@ -208,7 +208,7 @@ export const propertyContent: ServiceContent[] = [
   {
     slug: 'property-approval-assistance',
     metaTitle: 'Property Approval Assistance in Coimbatore',
-    metaDescription: 'Property approval assistance in Coimbatore: understand which approvals apply to your plot or building and prepare the paperwork for the authority.',
+    metaDescription: 'Understand the approvals relevant to your plot or building and get help organising paperwork for the concerned authority in Coimbatore.',
     h1: 'Property Approval Assistance for Plots and Buildings',
     tagline: 'Understand which approvals matter for your property and prepare the paperwork.',
     imageAlt: 'Illustration of a clipboard check mark, building and compass representing approval assistance',
@@ -241,8 +241,8 @@ export const propertyContent: ServiceContent[] = [
   },
   {
     slug: 'survey-number-issues',
-    metaTitle: 'Survey Number Issue Solutions in Coimbatore',
-    metaDescription: 'Survey number issue solutions in Coimbatore: find out why your deed and land records disagree and understand your options. Outcomes vary by case.',
+    metaTitle: 'Survey Number Discrepancy Assistance in Coimbatore',
+    metaDescription: 'Get help identifying survey number mismatches between deeds and land records, organising supporting papers and understanding possible next steps.',
     h1: 'Survey Number Issues and Solutions in Coimbatore',
     tagline: 'Understand why your deed and the land records disagree, and what can be done about it.',
     imageAlt: 'Illustration of a compass, ruler and land map representing survey number issues',

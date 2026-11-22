@@ -3,7 +3,7 @@ import { business } from '@/config/business';
 import { pageMetadata } from '@/lib/seo';
 import { PageSchema } from '@/components/seo/PageSchema';
 
-const description = 'How SSS Associate collects, uses and protects the name, mobile number, email and message you share through our enquiry form, phone and WhatsApp.';
+const description = 'Learn how SSS Associate uses and protects the contact details and messages you share through our website, phone and WhatsApp.';
 export const metadata = pageMetadata({ title: 'Privacy Policy | SSS Associate', description, path: '/privacy-policy', fullTitle: true });
 
 export default function Page() {

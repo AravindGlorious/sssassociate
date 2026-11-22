@@ -3,8 +3,8 @@ import type { ServiceContent } from './types';
 export const legalContent: ServiceContent[] = [
   {
     slug: 'legal-opinion',
-    metaTitle: 'Legal Opinion Services in Coimbatore',
-    metaDescription: 'Need a written legal opinion on property papers? SSS Associate organises your documents and coordinates with qualified advocates in Irugur, Coimbatore.',
+    metaTitle: 'Property Legal Opinion Services in Coimbatore',
+    metaDescription: 'Need a written property legal opinion? SSS Associate coordinates document preparation and review through qualified advocates in Coimbatore.',
     h1: 'Legal Opinion for Property and Documents in Coimbatore',
     tagline: 'A clear, written view on your property papers before you decide, prepared through a qualified advocate.',
     imageAlt: 'Illustration of a legal scroll, scales and magnifier representing a legal opinion',
@@ -37,8 +37,8 @@ export const legalContent: ServiceContent[] = [
   },
   {
     slug: 'panel-advocate-opinion',
-    metaTitle: 'Panel Advocate Opinion in Coimbatore',
-    metaDescription: 'Help arranging a panel advocate opinion when your bank or lender asks for one. Document preparation and coordination in Irugur, Coimbatore.',
+    metaTitle: 'Panel Advocate Opinion Assistance in Coimbatore',
+    metaDescription: 'Need a bank panel advocate opinion? Get help understanding lender requirements, organising property papers and coordinating the process.',
     h1: 'Panel Advocate Opinion Assistance in Coimbatore',
     tagline: 'Support when a lender or institution asks for an opinion from an advocate on its approved list.',
     imageAlt: 'Illustration of a group of professionals and a verification badge representing panel advocate opinions',
@@ -71,8 +71,8 @@ export const legalContent: ServiceContent[] = [
   },
   {
     slug: 'english-tamil-legal-opinion',
-    metaTitle: 'English & Tamil Legal Opinion in Coimbatore',
-    metaDescription: 'Legal opinions on property documents explained in English and Tamil, so every family member can follow the findings. Irugur, Coimbatore.',
+    metaTitle: 'Tamil and English Legal Opinion Assistance',
+    metaDescription: 'Get help understanding property legal opinion documents in Tamil and English, with the opinion prepared by a qualified advocate.',
     h1: 'English and Tamil Legal Opinion for Property Matters',
     tagline: 'Understand your legal opinion fully, in the language you are most comfortable with.',
     imageAlt: 'Illustration of a language symbol beside a legal scroll representing bilingual legal opinions',
@@ -105,8 +105,8 @@ export const legalContent: ServiceContent[] = [
   },
   {
     slug: 'agricultural-land-legal-opinion',
-    metaTitle: 'Agricultural Land Legal Opinion Coimbatore',
-    metaDescription: 'Agricultural land legal opinion support in Coimbatore: land records reviewed by a qualified advocate before you buy, sell, mortgage or inherit farmland.',
+    metaTitle: 'Agricultural Land Legal Opinion in Coimbatore',
+    metaDescription: 'Have agricultural land records reviewed by a qualified advocate before buying, selling, mortgaging or inheriting farmland in Coimbatore.',
     h1: 'Agricultural Land Legal Opinion in Coimbatore',
     tagline: 'Have the records behind farmland reviewed before you buy, sell, mortgage or divide it.',
     imageAlt: 'Illustration of a sprouting plant, wheat and land map representing agricultural land opinions',
@@ -140,7 +140,7 @@ export const legalContent: ServiceContent[] = [
   {
     slug: 'house-site-legal-opinion',
     metaTitle: 'House Site Legal Opinion in Coimbatore',
-    metaDescription: 'House site legal opinion in Irugur and Coimbatore. Get plot documents reviewed by a qualified advocate before you pay an advance or start building.',
+    metaDescription: 'Get house site and plot documents reviewed by a qualified advocate before paying an advance or planning construction in Coimbatore.',
     h1: 'House Site Legal Opinion in Irugur and Coimbatore',
     tagline: 'Check the papers behind a plot before you pay an advance or start building.',
     imageAlt: 'Illustration of a land plot, house and ruler representing house site legal opinions',
@@ -173,8 +173,8 @@ export const legalContent: ServiceContent[] = [
   },
   {
     slug: 'property-litigation',
-    metaTitle: 'Property Litigation Support in Coimbatore',
-    metaDescription: 'Property litigation assistance in Coimbatore: organised support for land and property disputes, with court representation by qualified advocates.',
+    metaTitle: 'Property Dispute and Litigation Support in Coimbatore',
+    metaDescription: 'Get organised document and coordination support for land and property disputes in Coimbatore. Legal representation is handled by qualified advocates.',
     h1: 'Property Litigation Support in Coimbatore',
     tagline: 'Organised help with property disputes, with representation handled by qualified advocates.',
     imageAlt: 'Illustration of a gavel and scales beside a building representing property litigation',
@@ -207,8 +207,8 @@ export const legalContent: ServiceContent[] = [
   },
   {
     slug: 'litigation-resolution',
-    metaTitle: 'Litigation Resolution Support in Coimbatore',
-    metaDescription: 'Explore settlement of property and related disputes in Coimbatore with organised documents and discussions. Legal steps are handled by qualified advocates.',
+    metaTitle: 'Property Dispute Resolution Support in Coimbatore',
+    metaDescription: 'Get assistance organising documents and coordinating discussions for property disputes. Legal proceedings are handled by qualified advocates.',
     h1: 'Litigation Resolution Support for Disputes in Coimbatore',
     tagline: 'Explore whether a dispute can be settled, with documents and discussions properly organised.',
     imageAlt: 'Illustration of a handshake with scales and a signed document representing dispute resolution',
@@ -241,8 +241,8 @@ export const legalContent: ServiceContent[] = [
   },
   {
     slug: 'old-document-verification',
-    metaTitle: 'Old Document Verification in Coimbatore',
-    metaDescription: 'Old property document verification in Coimbatore: check older deeds and land records for gaps, mismatches and missing links in the ownership chain.',
+    metaTitle: 'Old Property Document Verification in Coimbatore',
+    metaDescription: 'Review older property deeds and land records to identify missing links, inconsistencies and possible gaps in the ownership document chain.',
     h1: 'Old Property Document Verification in Coimbatore',
     tagline: 'Find gaps and mismatches in older deeds and records before they become problems.',
     imageAlt: 'Illustration of a document with a magnifying glass and chain link representing old document verification',
@@ -276,7 +276,7 @@ export const legalContent: ServiceContent[] = [
   {
     slug: 'legal-document-translation',
     metaTitle: 'Legal Document Translation in Coimbatore',
-    metaDescription: 'Legal document translation between Tamil and English in Coimbatore for deeds, notices and property papers. Check certification needs with the office.',
+    metaDescription: 'Get Tamil to English and English to Tamil translations of property deeds, notices and legal documents in Coimbatore.',
     h1: 'Legal Document Translation Between Tamil and English',
     tagline: 'Clear, careful translation of deeds, notices and legal papers for use with advocates, banks and offices.',
     imageAlt: 'Illustration of a book, language symbol and verification badge representing legal document translation',
@@ -309,8 +309,8 @@ export const legalContent: ServiceContent[] = [
   },
   {
     slug: 'english-to-tamil-translation',
-    metaTitle: 'English to Tamil Legal Translation Coimbatore',
-    metaDescription: 'English to Tamil translation of agreements, notices and property documents in Coimbatore, so you understand every clause before you sign.',
+    metaTitle: 'English to Tamil Legal Document Translation',
+    metaDescription: 'Understand agreements, legal notices and property documents with English to Tamil translation assistance in Coimbatore.',
     h1: 'English to Tamil Translation of Legal and Property Documents',
     tagline: 'Understand an English agreement or notice completely, in Tamil, before you act on it.',
     imageAlt: 'Illustration of a document moving into a translated copy with a language symbol representing English to Tamil translation',
@@ -343,8 +343,8 @@ export const legalContent: ServiceContent[] = [
   },
   {
     slug: 'tamil-to-english-translation',
-    metaTitle: 'Tamil to English Legal Translation Coimbatore',
-    metaDescription: 'Tamil to English translation of sale deeds, patta, settlement papers and other property records in Coimbatore for banks, advocates and offices.',
+    metaTitle: 'Tamil to English Legal Document Translation',
+    metaDescription: 'Get sale deeds, patta records, settlement papers and other property documents translated from Tamil to English in Coimbatore.',
     h1: 'Tamil to English Translation of Deeds and Property Records',
     tagline: 'Make Tamil deeds and records usable for banks, advocates and other parties who work in English.',
     imageAlt: 'Illustration of a Tamil document being rendered into an English copy with a language symbol',

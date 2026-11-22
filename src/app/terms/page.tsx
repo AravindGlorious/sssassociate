@@ -3,7 +3,7 @@ import { LegalDoc } from '@/components/layout/LegalDoc';
 import { pageMetadata } from '@/lib/seo';
 import { PageSchema } from '@/components/seo/PageSchema';
 
-const description = 'Terms for using the SSS Associate website in Coimbatore and enquiring about our legal, property and financial assistance services. No outcomes are guaranteed.';
+const description = 'Review the terms for using the SSS Associate website, requesting services, and understanding service scope, fees and outcome limitations.';
 export const metadata = pageMetadata({ title: 'Terms & Conditions | SSS Associate', description, path: '/terms', fullTitle: true });
 
 export default function Page() {

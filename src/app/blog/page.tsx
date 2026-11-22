@@ -8,7 +8,7 @@ import { blogTeasers, publishedPosts } from '@/data/blog';
 import { pageMetadata } from '@/lib/seo';
 
 const description =
-  'Explore practical guides from SSS Associate on property documents, registration, patta and chitta, Encumbrance Certificates and bank settlements in Coimbatore and Tamil Nadu.';
+  'Read practical guides on property documents, land records, registration, patta, chitta and bank settlements in Coimbatore and Tamil Nadu.';
 
 const hasPublishedPosts = publishedPosts.length > 0;
 
