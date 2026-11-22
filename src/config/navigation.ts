@@ -36,6 +36,7 @@ export const quickLinks = [
 export const legalLinks = [
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Terms & Conditions', href: '/terms' },
+  { label: 'Editorial Policy', href: '/editorial-policy' },
   { label: 'Disclaimer', href: '/disclaimer' },
 ];
 
