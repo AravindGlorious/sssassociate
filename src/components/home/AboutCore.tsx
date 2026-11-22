@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -54,19 +53,15 @@ export function AboutCore() {
 
           <h2 id="about-title">
             Clear Guidance for Important
-            <em> Property & Financial Matters</em>
+            <em> Property &amp; Financial Matters</em>
           </h2>
 
           <p>
-            SSS Associate Services helps individuals and families
-            understand property records, registration procedures
-            and bank-related paperwork. We review documents,
-            explain relevant processes and outline the next steps
-            in simple language. Our aim is to make each stage
-            easier to understand through clear communication
-            and dependable customer care. We are based in Irugur,
-            Coimbatore, and serve customers according to their
-            requirements.
+            SSS Associate Services helps families review land
+            records, registration steps, and bank files. We
+            explain each step in plain words and share clear
+            next options. Based in Irugur, Coimbatore, our team
+            supports clients across Tamil Nadu with care.
           </p>
 
           <Link href="/about" className="btn btn-sm">

@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import {
   Coins,
@@ -23,7 +22,7 @@ export function ServicesOverview() {
       id="services"
       eyebrow="What we do"
       title="Our Services"
-      intro="Explore practical support for property records, registration procedures, important paperwork and financial matters."
+      intro="Get clear help with land records, registration steps, key documents, and bank files."
     >
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <li>
@@ -32,7 +31,7 @@ export function ServicesOverview() {
             title="Legal Services"
             href={categories.legal.path}
             count={byCategory('legal').length}
-            text="Understand important documents, review relevant details and connect with qualified advocates when required."
+            text="Review key deeds and records. We connect you with qualified advocates when needed."
           />
         </li>
 
@@ -42,7 +41,7 @@ export function ServicesOverview() {
             title="Land & Registration"
             href={categories.property.path}
             count={byCategory('property').length}
-            text="Get guidance on patta, EC, sale deeds, land records and property registration procedures."
+            text="Get guidance on patta, EC, sale deeds, land records, and registration steps."
           />
         </li>
 
@@ -52,7 +51,7 @@ export function ServicesOverview() {
             title="Financial Services"
             href={categories.financial.path}
             count={byCategory('financial').length}
-            text="Find help with bank paperwork, one-time settlement documents and loan-related matters."
+            text="Get help with bank files, one-time settlement forms, and loan records."
           />
         </li>
 
@@ -61,7 +60,7 @@ export function ServicesOverview() {
             Icon={Languages}
             title="Documentation & Translation"
             href="/services/legal-document-translation"
-            text="Translate relevant official and legal documents between Tamil and English."
+            text="Translate official and legal documents between Tamil and English."
           />
         </li>
       </ul>
@@ -73,32 +72,32 @@ const why = [
   {
     Icon: FileSearch,
     title: 'Careful Document Review',
-    text: 'We help you understand the details in your paperwork and identify points that may need further attention.',
+    text: 'We check your records clearly and point out items that need closer review.',
   },
   {
     Icon: Users,
     title: 'Coordinated Support',
-    text: 'We organise related paperwork and help you connect with the right professional when needed.',
+    text: 'We organize your files and link you with the right specialist when required.',
   },
   {
     Icon: MessageSquareText,
     title: 'Clear Communication',
-    text: 'We explain processes, required documents and next steps in simple English and Tamil.',
+    text: 'We explain each step and required file in plain English and Tamil.',
   },
   {
     Icon: ShieldCheck,
     title: 'Honest and Transparent',
-    text: 'We explain our services, fees and limitations clearly. We never promise guaranteed approvals or outcomes.',
+    text: 'We state our scope, fees, and limits upfront. We never promise guaranteed approvals.',
   },
   {
     Icon: MapPin,
     title: 'Serving Tamil Nadu',
-    text: 'Customers from different cities and towns can contact us. Availability depends on the service and location.',
+    text: 'Clients across cities and towns can reach us. Service scope depends on location.',
   },
   {
     Icon: FileSearch,
     title: 'Personal Attention',
-    text: 'We first understand your situation and then identify the paperwork and guidance relevant to your needs.',
+    text: 'We listen to your case first, then suggest the right records and next steps.',
   },
 ];
 
@@ -109,7 +108,7 @@ export function WhyChoose() {
       tone="mist"
       eyebrow="Why SSS Associate"
       title="Why Work With Us?"
-      intro="We focus on clear communication, organised paperwork and dependable customer care."
+      intro="We focus on plain communication, organized files, and steady client care."
     >
       <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {why.map(({ Icon, title, text }) => (
@@ -140,19 +139,19 @@ export function WhyChoose() {
 const steps = [
   {
     title: 'Tell Us What You Need',
-    text: 'Call us, send a WhatsApp message or use the enquiry form to explain your requirement.',
+    text: 'Call us, message on WhatsApp, or submit the form to share your need.',
   },
   {
     title: 'Share the Documents',
-    text: 'Send the available paperwork so we can understand your request.',
+    text: 'Send copies of available records so we can review your request.',
   },
   {
     title: 'Review the Next Steps',
-    text: 'We explain the process, required documents and when specialist advice may be needed.',
+    text: 'We explain the steps, needed files, and when advocate review helps.',
   },
   {
     title: 'Receive the Agreed Support',
-    text: 'We help with the agreed paperwork and follow-up based on your request.',
+    text: 'We assist with the agreed document steps and follow-ups.',
   },
 ];
 
@@ -163,7 +162,7 @@ export function HowWeWork() {
       tone="navy"
       eyebrow="Our process"
       title="How We Work"
-      intro="Here is what to expect when you contact our team."
+      intro="Here is what happens when you reach out to our team."
     >
       <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
@@ -217,7 +216,7 @@ export function AreasWeServe() {
       id="areas"
       eyebrow="Our reach"
       title="Serving Customers Across Tamil Nadu"
-      intro="Customers across Tamil Nadu can contact us about property records, registration procedures and financial paperwork."
+      intro="Clients across Tamil Nadu can contact us for land records, registration steps, and bank files."
     >
       <div className="mx-auto max-w-5xl">
         <div className="rounded-2xl bg-navy p-7 text-center text-white shadow-lg sm:p-10">
@@ -232,8 +231,8 @@ export function AreasWeServe() {
           </h3>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/75">
-            Contact us to discuss your requirement and check whether the
-            requested service is available in your area.
+            Reach out to share your need and check service availability in your
+            area.
           </p>
         </div>
 
@@ -265,8 +264,8 @@ export function AreasWeServe() {
           </h3>
 
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            Tell us what you need. Our team will explain the available options
-            and the next steps.
+            Share what you need. Our team will explain your options and next
+            steps.
           </p>
 
           <Link
