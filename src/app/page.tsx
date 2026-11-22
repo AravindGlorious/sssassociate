@@ -24,7 +24,7 @@ import { PageSchema } from '@/components/seo/PageSchema';
 import { pageMetadata } from '@/lib/seo';
 
 const description =
-  'SSS Associate Services offers document checks, land registration guidance and bank file support across Tamil Nadu. Contact us today.';
+  'SSS Associate Services offers document checks, property registration guidance and bank file support across Tamil Nadu. Contact us today.';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Property Document Support in Tamil Nadu | SSS Associate',
@@ -37,7 +37,7 @@ export default function HomePage() {
   return (
     <>
       <PageSchema
-        name="SSS Associate Services – Land Documents and Financial Support"
+        name="SSS Associate Services – Property Documents and Financial Support"
         description={description}
         path="/"
       />
@@ -56,7 +56,7 @@ export default function HomePage() {
         tone="mist"
         eyebrow="Document Review"
         title="Legal Document Review"
-        intro="Check key deeds before you decide. Our team helps you verify records and understand every step clearly."
+        intro="Check key deeds before you decide. Our team helps you verify title papers and understand every step clearly."
         slugs={[
           'legal-opinion',
           'agricultural-land-legal-opinion',
@@ -69,8 +69,8 @@ export default function HomePage() {
         id="featured-property"
         category="property"
         eyebrow="Registration"
-        title="Land Records & Registration"
-        intro="Get clear guidance on patta, encumbrance certificates, and registration steps when buying or selling land."
+        title="Property Documents & Registration"
+        intro="Get clear guidance on patta, encumbrance certificates, and registration steps when buying or selling property."
         slugs={[
           'property-opinion',
           'property-registration',
@@ -115,7 +115,7 @@ export default function HomePage() {
           id="blog"
           eyebrow="Guides"
           title="Latest Helpful Guides"
-          intro="Read practical guides on land records, deed registration, and bank settlements."
+          intro="Read practical guides on property papers, deed registration, and bank settlements."
         >
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {publishedPosts.slice(0, 3).map((post) => (
