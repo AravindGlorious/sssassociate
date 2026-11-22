@@ -19,11 +19,12 @@ export function Header() {
       <div className="wrap">
         <Link href="/" className="brand" aria-label={`${business.shortName} home`}>
           <Image
-  src="/images/sss-associate-services-logo.jpg"
-  alt="SSS Associate Services logo"
-  width={100}
-  height={94}
-/>
+            src="/images/sss-associate-services-logo.jpg"
+            alt="SSS Associate Services logo"
+            width={100}
+            height={94}
+            loading="eager"
+          />
           <span>
             <b>{business.name}</b>
             <small>{business.tagline}</small>

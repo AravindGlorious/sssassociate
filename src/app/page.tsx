@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -25,7 +24,7 @@ import { PageSchema } from '@/components/seo/PageSchema';
 import { pageMetadata } from '@/lib/seo';
 
 const description =
-  'SSS Associate Services offers property document checks, registration guidance and bank documentation support across Tamil Nadu. Contact us for assistance.';
+  'SSS Associate Services offers document checks, land registration guidance and bank file support across Tamil Nadu. Contact us today.';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Property Document Support in Tamil Nadu | SSS Associate',
@@ -38,7 +37,7 @@ export default function HomePage() {
   return (
     <>
       <PageSchema
-        name="SSS Associate Services – Property Documents and Financial Support"
+        name="SSS Associate Services – Land Documents and Financial Support"
         description={description}
         path="/"
       />
@@ -56,8 +55,8 @@ export default function HomePage() {
         category="legal"
         tone="mist"
         eyebrow="Document Review"
-        title="Property Document Review"
-        intro="Review important papers before making a decision. Our team helps you understand document details and the steps involved."
+        title="Legal Document Review"
+        intro="Check key deeds before you decide. Our team helps you verify records and understand every step clearly."
         slugs={[
           'legal-opinion',
           'agricultural-land-legal-opinion',
@@ -70,8 +69,8 @@ export default function HomePage() {
         id="featured-property"
         category="property"
         eyebrow="Registration"
-        title="Property Records & Registration"
-        intro="Get guidance on land records, registration procedures and the paperwork involved in buying or selling property."
+        title="Land Records & Registration"
+        intro="Get clear guidance on patta, encumbrance certificates, and registration steps when buying or selling land."
         slugs={[
           'property-opinion',
           'property-registration',
@@ -86,7 +85,7 @@ export default function HomePage() {
         tone="mist"
         eyebrow="Financial"
         title="Bank & Financial Documentation"
-        intro="Get support with bank paperwork and settlement procedures. Final approvals and settlement terms are decided by the lender."
+        intro="Get help organizing bank files and settlement requests. Final approvals and terms rest solely with the lender."
         slugs={[
           'financial-opinion',
           'bank-litigation-settlement',
@@ -106,7 +105,7 @@ export default function HomePage() {
         tone="mist"
         eyebrow="Questions"
         title="Frequently Asked Questions"
-        intro="Find straightforward answers about our services and the steps involved."
+        intro="Read simple, clear answers about our services and how the process works."
       >
         <FaqList faqs={homeFaqs} />
       </Section>
@@ -116,7 +115,7 @@ export default function HomePage() {
           id="blog"
           eyebrow="Guides"
           title="Latest Helpful Guides"
-          intro="Explore practical guides about property records, registration and financial settlements."
+          intro="Read practical guides on land records, deed registration, and bank settlements."
         >
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {publishedPosts.slice(0, 3).map((post) => (

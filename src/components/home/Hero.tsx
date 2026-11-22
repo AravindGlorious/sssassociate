@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react';
@@ -44,6 +43,7 @@ export function Hero() {
             width={1600}
             height={900}
             preload
+            fetchPriority="high"
             sizes="(max-width: 900px) 100vw, 50vw"
             className="hero-image"
           />
