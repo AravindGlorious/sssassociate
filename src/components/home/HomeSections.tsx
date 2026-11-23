@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import {
   Coins,
@@ -21,17 +22,17 @@ export function ServicesOverview() {
     <Section
       id="services"
       eyebrow="What we do"
-      title="Our Services"
-      intro="Get clear help with property documents, registration steps, key deeds, and bank files."
+      title="Property, Legal Document and Financial Support"
+      intro="Explore practical assistance with property records, document checks, registration procedures, translations and bank paperwork."
     >
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <li>
           <CategoryOverviewCard
             Icon={Scale}
-            title="Legal Services"
+            title="Legal Document Support"
             href={categories.legal.path}
             count={byCategory('legal').length}
-            text="Review key deeds and title papers. We connect you with qualified advocates when needed."
+            text="Get help reviewing important deeds and property papers. We can coordinate with qualified advocates when legal advice is required."
           />
         </li>
 
@@ -41,26 +42,26 @@ export function ServicesOverview() {
             title="Property & Registration"
             href={categories.property.path}
             count={byCategory('property').length}
-            text="Get guidance on patta, EC, sale deeds, property papers, and registration steps."
+            text="Understand the paperwork involved in patta transfer, EC applications, sale deeds and property registration."
           />
         </li>
 
         <li>
           <CategoryOverviewCard
             Icon={Coins}
-            title="Financial Services"
+            title="Bank & Financial Support"
             href={categories.financial.path}
             count={byCategory('financial').length}
-            text="Get help with bank files, one-time settlement forms, and loan papers."
+            text="Get assistance organizing loan documents, bank files and one-time settlement requests. Final decisions rest with the lender."
           />
         </li>
 
         <li>
           <CategoryOverviewCard
             Icon={Languages}
-            title="Documentation & Translation"
+            title="Document Translation"
             href="/services/legal-document-translation"
-            text="Translate official and legal documents between Tamil and English."
+            text="Get assistance translating relevant documents between Tamil and English."
           />
         </li>
       </ul>
@@ -72,32 +73,32 @@ const why = [
   {
     Icon: FileSearch,
     title: 'Careful Document Review',
-    text: 'We check your papers clearly and point out items that need closer review.',
+    text: 'We help you check important details in your documents and identify points that may need further professional review.',
   },
   {
     Icon: Users,
     title: 'Coordinated Support',
-    text: 'We organize your files and link you with the right specialist when required.',
+    text: 'We help organize your paperwork and coordinate with suitable professionals when your requirements call for it.',
   },
   {
     Icon: MessageSquareText,
     title: 'Clear Communication',
-    text: 'We explain each step and needed file in plain English and Tamil.',
+    text: 'We explain document requirements and process steps in simple English or Tamil.',
   },
   {
     Icon: ShieldCheck,
     title: 'Honest and Transparent',
-    text: 'We state our scope, fees, and limits upfront. We never promise guaranteed approvals.',
+    text: 'We explain our service scope, applicable charges and limitations. We do not promise guaranteed legal or financial outcomes.',
   },
   {
     Icon: MapPin,
-    title: 'Serving Across the State',
-    text: 'Clients across cities and towns can reach us. Service scope depends on location.',
+    title: 'Tamil Nadu Service Reach',
+    text: 'Customers from different parts of Tamil Nadu can contact us to check service availability for their requirements.',
   },
   {
     Icon: FileSearch,
     title: 'Personal Attention',
-    text: 'We listen to your case first, then suggest the right documents and next steps.',
+    text: 'We first understand your requirement, then explain the relevant documents and practical next steps.',
   },
 ];
 
@@ -107,8 +108,8 @@ export function WhyChoose() {
       id="why-us"
       tone="mist"
       eyebrow="Why SSS Associate"
-      title="Why Work With Us?"
-      intro="We focus on plain communication, organized files, and steady client care."
+      title="Why Choose SSS Associate?"
+      intro="We believe good support starts with clear communication, organized paperwork and honest guidance."
     >
       <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {why.map(({ Icon, title, text }) => (
@@ -139,19 +140,19 @@ export function WhyChoose() {
 const steps = [
   {
     title: 'Tell Us What You Need',
-    text: 'Call us, message on WhatsApp, or submit the form to share your need.',
+    text: 'Call us, send a WhatsApp message or submit the contact form to explain your requirement.',
   },
   {
-    title: 'Share the Documents',
-    text: 'Send copies of available papers so we can review your request.',
+    title: 'Share the Available Documents',
+    text: 'Share copies of the relevant papers so we can understand your request.',
   },
   {
-    title: 'Review the Next Steps',
-    text: 'We explain the steps, needed files, and when advocate review helps.',
+    title: 'Understand the Next Steps',
+    text: 'We explain the process, documents required and when assistance from a qualified advocate or other professional may be needed.',
   },
   {
     title: 'Receive the Agreed Support',
-    text: 'We assist with the agreed document steps and follow-ups.',
+    text: 'We provide the document assistance and coordination agreed for your requirement.',
   },
 ];
 
@@ -161,8 +162,8 @@ export function HowWeWork() {
       id="process"
       tone="navy"
       eyebrow="Our process"
-      title="How We Work"
-      intro="Here is what happens when you reach out to our team."
+      title="How Our Process Works"
+      intro="A simple process helps us understand your needs and explain the next steps."
     >
       <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
@@ -214,9 +215,9 @@ export function AreasWeServe() {
   return (
     <Section
       id="areas"
-      eyebrow="Our reach"
-      title="Serving Customers Across Tamil Nadu"
-      intro="Clients across Coimbatore and nearby districts can contact us for property papers, registration steps, and bank files."
+      eyebrow="Where we serve"
+      title="Supporting Customers Across Tamil Nadu"
+      intro="Based in Irugur, Coimbatore, SSS Associate Services welcomes enquiries from customers across Tamil Nadu for property documentation, registration guidance and bank paperwork."
     >
       <div className="mx-auto max-w-5xl">
         <div className="rounded-2xl bg-navy p-7 text-center text-white shadow-lg sm:p-10">
@@ -227,18 +228,18 @@ export function AreasWeServe() {
           />
 
           <h3 className="mt-4 font-heading text-2xl font-bold sm:text-3xl">
-            Support Across Multiple Cities
+            Assistance Across Multiple Cities
           </h3>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/75">
-            Reach out to share your need and check service availability in your
-            area.
+            Contact our team with your location and requirement. We will help
+            you check whether the requested service is available in your area.
           </p>
         </div>
 
         <div className="mt-8">
           <h3 className="mb-5 text-center font-heading text-lg font-bold text-navy">
-            Cities and Locations
+            Cities We Receive Enquiries From
           </h3>
 
           <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -260,12 +261,12 @@ export function AreasWeServe() {
 
         <div className="mt-9 rounded-xl border border-gray-200 bg-white p-6 text-center sm:p-8">
           <h3 className="font-heading text-xl font-bold text-navy">
-            Have a Question?
+            Need Help With Your Documents?
           </h3>
 
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            Share what you need. Our team will explain your options and next
-            steps.
+            Tell us what you need. Our team will explain the available support
+            and the next steps.
           </p>
 
           <Link

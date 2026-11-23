@@ -6,38 +6,38 @@ export interface Faq {
 
 export const homeFaqs: Faq[] = [
   {
-    question: 'What services does SSS Associate provide?',
+    question: 'What services does SSS Associate offer?',
     answer:
-      'We assist with document verification, legal documentation, registration procedures, patta and chitta services, Encumbrance Certificates, Tamil and English document translation, and bank-related paperwork.',
+      'We help with property document checks, registration guidance, patta and chitta work, Encumbrance Certificates (EC), document translation, and bank paperwork.',
   },
   {
-    question: 'Who handles legal opinions and court representation?',
+    question: 'Who provides legal advice and court support?',
     answer:
-      'Where legal advice or court representation is required, it is handled by appropriately qualified advocates. SSS Associate provides documentation assistance and coordination for related services.',
+      'Qualified advocates provide legal advice and court representation when needed. SSS Associate helps with document work and connects customers with the right professionals.',
   },
   {
-    question: 'Can you guarantee legal or financial approvals?',
+    question: 'Can you guarantee approvals or settlements?',
     answer:
-      'No. Decisions depend on the documents, facts and the authorities or lenders involved. We do not guarantee court outcomes, government approvals, loan approvals or bank settlements.',
+      'No. Courts, government offices and banks make their own decisions. We cannot promise legal results, government approvals, loans or bank settlements.',
   },
   {
-    question: 'What documents should I submit?',
+    question: 'Which documents do I need to provide?',
     answer:
-      'The required documents depend on your situation. Contact us with a brief explanation of your requirement. We will help identify the relevant paperwork for your matter.',
+      'It depends on the service you need. Tell us about your requirement first. We will explain which papers may be needed for your case.',
   },
   {
-    question: 'Can I get help with Tamil documents?',
+    question: 'Can you help with Tamil and English documents?',
     answer:
-      'Yes. We assist with Tamil and English document translation. We can help with translation requirements for relevant legal and official documents.',
+      'Yes. We assist with translation between Tamil and English for relevant official and legal documents.',
   },
   {
-    question: 'Do you provide assistance across Tamil Nadu?',
+    question: 'Do you serve customers across Tamil Nadu?',
     answer:
-      'We assist customers from different locations across Tamil Nadu, depending on the service required. Contact our team to check whether we can support your specific request.',
+      'Yes. Customers from different parts of Tamil Nadu can contact us. Service availability depends on the type of work and location.',
   },
   {
-    question: 'How can I contact SSS Associate?',
+    question: 'How can I contact your team?',
     answer:
-      'You can call us, send a WhatsApp message or submit an enquiry through our contact page. Briefly explain what you need, and our team will guide you on the next steps.',
+      'Call us, send a WhatsApp message or use our contact form. Briefly explain what you need, and we will guide you on the next steps.',
   },
 ];

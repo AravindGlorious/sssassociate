@@ -1,16 +1,33 @@
 
-import { House, Handshake, Scale, ShieldCheck } from 'lucide-react';
+import {
+  House,
+  Handshake,
+  Scale,
+  ShieldCheck,
+} from 'lucide-react';
 
 const items = [
-  { Icon: Scale, text: ['Document Review', '& Process Guidance'] },
-  { Icon: House, text: ['Property Checks', '& Registration'] },
-  { Icon: Handshake, text: ['Bank & Loan', 'Settlement Support'] },
-  { Icon: ShieldCheck, text: ['Clear & Reliable', 'Customer Care'] },
+  {
+    Icon: Scale,
+    text: ['Document Checks', '& Process Guidance'],
+  },
+  {
+    Icon: House,
+    text: ['Property Records', '& Registration Support'],
+  },
+  {
+    Icon: Handshake,
+    text: ['Bank & Loan', 'Paperwork Assistance'],
+  },
+  {
+    Icon: ShieldCheck,
+    text: ['Clear Communication', '& Customer Support'],
+  },
 ];
 
 export function Highlights() {
   return (
-    <section className="strip" aria-label="Key highlights">
+    <section className="strip" aria-label="Our service highlights">
       <ul className="wrap">
         {items.map(({ Icon, text }) => (
           <li key={text[0]} className="cell">

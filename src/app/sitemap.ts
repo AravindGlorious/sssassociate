@@ -19,6 +19,7 @@ const policyPages = [
   '/privacy-policy',
   '/terms',
   '/disclaimer',
+  '/editorial-policy',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

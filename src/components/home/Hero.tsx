@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react';
@@ -8,7 +9,7 @@ export function Hero() {
       <div className="wrap">
         <div>
           <p className="kick">
-            Trust • Transparency • Professionalism
+            Trust | Transparency | Professionalism
           </p>
 
           <h1 id="hero-title">
@@ -17,10 +18,10 @@ export function Hero() {
           </h1>
 
           <p>
-            Need help with property records, document checks,
-            registration or bank paperwork? We explain the
-            process, help you understand your options and guide
-            you through the next steps.
+            Need help checking property papers, preparing documents,
+            or understanding registration steps? We explain the process
+            in simple words and help you plan your next steps.
+            We also assist with bank and loan paperwork.
           </p>
 
           <div className="cta">
@@ -43,6 +44,7 @@ export function Hero() {
             width={1600}
             height={900}
             priority
+            fetchPriority="high"
             sizes="(max-width: 900px) 100vw, 50vw"
             className="hero-image"
           />
