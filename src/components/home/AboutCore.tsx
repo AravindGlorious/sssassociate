@@ -1,35 +1,96 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  ArrowRight,
-  Coins,
-  FileText,
-  House,
-  Scale,
-} from 'lucide-react';
 
 import { categories } from '@/data/services';
 
 const core = [
   {
-    Icon: Scale,
     label: ['Legal', 'Document Support'],
     href: categories.legal.path,
+    icon: (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 3v18" />
+        <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" />
+        <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
+        <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" />
+        <path d="M7 21h10" />
+      </svg>
+    ),
   },
   {
-    Icon: House,
     label: ['Property', '& Registration'],
     href: categories.property.path,
+    icon: (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+        <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      </svg>
+    ),
   },
   {
-    Icon: Coins,
     label: ['Bank &', 'Financial Support'],
     href: categories.financial.path,
+    icon: (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M13.744 17.736a6 6 0 1 1-7.48-7.48" />
+        <path d="M15 6h1v4" />
+        <path d="m6.134 14.768.866-.5 2 3.464" />
+        <circle cx="16" cy="8" r="6" />
+      </svg>
+    ),
   },
   {
-    Icon: FileText,
     label: ['Documents', '& Translation'],
     href: '/services/legal-document-translation',
+    icon: (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+        <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+        <path d="M10 9H8" />
+        <path d="M16 13H8" />
+        <path d="M16 17H8" />
+      </svg>
+    ),
   },
 ];
 
@@ -58,20 +119,17 @@ export function AboutCore() {
           </h2>
 
           <p>
-            Based in Irugur, Coimbatore, we help people check property
-            records, prepare registration files, and organize bank documents.
-            We guide you through each step without confusion.
+            Based in Irugur, Coimbatore, we help check property records,
+            prepare registration files, and organize bank files clearly.
           </p>
 
           <p>
-            We explain requirements in simple English and Tamil. When legal
-            or specialist advice is needed, we connect you with qualified
-            professionals.
+            We explain steps in simple English and Tamil, and connect you with
+            qualified professionals when specialist advice is needed.
           </p>
 
           <Link href="/about" className="btn btn-sm">
-            Learn About Our Services
-            <ArrowRight size={16} aria-hidden="true" />
+            Learn About Our Services →
           </Link>
         </div>
 
@@ -79,9 +137,9 @@ export function AboutCore() {
           <h2>Our Main Service Areas</h2>
 
           <div className="g">
-            {core.map(({ Icon, label, href }) => (
+            {core.map(({ icon, label, href }) => (
               <Link key={label[0]} href={href}>
-                <Icon strokeWidth={1.8} aria-hidden="true" />
+                {icon}
                 {label[0]}
                 <br />
                 {label[1]}

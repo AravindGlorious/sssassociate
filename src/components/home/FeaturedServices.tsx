@@ -31,7 +31,13 @@ export function FeaturedServices({
 }: Props) {
   const list = slugs
     .map(getService)
-    .filter((service): service is Service => Boolean(service));
+    .filter((service): service is Service => Boolean(service))
+    .map(({ slug, title: serviceTitle, summary, shortDescription }) => ({
+      slug,
+      title: serviceTitle,
+      summary,
+      shortDescription,
+    }));
 
   const categoryInfo = categories[category];
 
@@ -47,7 +53,7 @@ export function FeaturedServices({
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {list.map((service) => (
             <li key={service.slug}>
-              <ServiceCard service={service} />
+              <ServiceCard service={service as Service} />
             </li>
           ))}
         </ul>

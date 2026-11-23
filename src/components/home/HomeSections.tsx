@@ -1,12 +1,5 @@
 import Link from 'next/link';
-import {
-  Coins,
-  FileSearch,
-  Languages,
-  MapPin,
-  Scale,
-  ArrowRight,
-} from 'lucide-react';
+import { Coins, Languages, MapPin, Scale } from 'lucide-react';
 
 import { Section } from '@/components/ui/Section';
 import { CategoryOverviewCard } from '@/components/services/CategoryOverviewCard';
@@ -18,7 +11,7 @@ export function ServicesOverview() {
       id="services"
       eyebrow="What we do"
       title="Property, Legal & Bank File Support"
-      intro="Get clear help with property records, registration steps, translations, and bank paperwork."
+      intro="Clear help with property records, registration steps, translations, and bank paperwork."
     >
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <li>
@@ -27,7 +20,7 @@ export function ServicesOverview() {
             title="Legal Document Support"
             href={categories.legal.path}
             count={byCategory('legal').length}
-            text="Review key deeds and land papers. We connect you with qualified advocates when legal advice is needed."
+            text="Review key deeds and connect with qualified advocates when needed."
           />
         </li>
 
@@ -37,7 +30,7 @@ export function ServicesOverview() {
             title="Property & Registration"
             href={categories.property.path}
             count={byCategory('property').length}
-            text="Get guidance on patta transfer, EC checks, sale deeds, and property registration."
+            text="Guidance on patta transfer, EC checks, sale deeds, and registration."
           />
         </li>
 
@@ -47,7 +40,7 @@ export function ServicesOverview() {
             title="Bank & Financial Support"
             href={categories.financial.path}
             count={byCategory('financial').length}
-            text="Organize loan files and one-time settlement requests. The lender always makes the final decision."
+            text="Organize loan files and settlement requests. Lenders decide final terms."
           />
         </li>
 
@@ -67,11 +60,11 @@ export function ServicesOverview() {
 const why = [
   {
     title: 'Careful Document Review',
-    text: 'We check key details in your papers and flag items that need expert review.',
+    text: 'We check key details in your papers and flag items needing expert review.',
   },
   {
     title: 'Coordinated Support',
-    text: 'We organize your files and connect you with the right professionals when needed.',
+    text: 'We organize files and connect you with qualified professionals when needed.',
   },
   {
     title: 'Clear Communication',
@@ -79,15 +72,15 @@ const why = [
   },
   {
     title: 'Honest and Transparent',
-    text: 'We share our scope, fees, and limits upfront. We never promise guaranteed outcomes.',
+    text: 'We share our scope, fees, and limits upfront without false promises.',
   },
   {
     title: 'Tamil Nadu Service Reach',
-    text: 'Clients across Tamil Nadu can contact us to check support in their area.',
+    text: 'Clients across Tamil Nadu can reach out to check local support.',
   },
   {
     title: 'Personal Attention',
-    text: 'We listen to your case first, then list the exact papers and steps you need.',
+    text: 'We review your case first, then list exact papers and steps needed.',
   },
 ];
 
@@ -98,7 +91,7 @@ export function WhyChoose() {
       tone="mist"
       eyebrow="Why SSS Associate"
       title="Why Choose SSS Associate?"
-      intro="Good support starts with clear communication, neat paperwork, and honest guidance."
+      intro="Clear communication, neat paperwork, and honest guidance."
     >
       <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {why.map(({ title, text }) => (
@@ -118,19 +111,19 @@ export function WhyChoose() {
 const steps = [
   {
     title: 'Tell Us What You Need',
-    text: 'Call us, message on WhatsApp, or use our contact form to share your need.',
+    text: 'Call, message on WhatsApp, or use our contact form to share your need.',
   },
   {
     title: 'Share Available Papers',
-    text: 'Send copies of your current records so we can review your case.',
+    text: 'Send copies of current records so we can review your case.',
   },
   {
     title: 'Understand Next Steps',
-    text: 'We explain the process, required files, and when an advocate is needed.',
+    text: 'We explain the process, needed files, and advocate involvement.',
   },
   {
     title: 'Get Agreed Support',
-    text: 'We complete the document prep and coordination agreed for your case.',
+    text: 'We complete the agreed document prep and coordination.',
   },
 ];
 
@@ -141,7 +134,7 @@ export function HowWeWork() {
       tone="navy"
       eyebrow="Our process"
       title="How Our Process Works"
-      intro="Four simple steps help us understand your case and guide you clearly."
+      intro="Four simple steps to understand your case and move forward."
     >
       <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
@@ -177,12 +170,7 @@ const serviceAreas = [
   'Vellore',
   'Tirunelveli',
   'Dindigul',
-  'Namakkal',
   'Karur',
-  'Kanchipuram',
-  'Tiruvallur',
-  'Villupuram',
-  'Cuddalore',
   'Thoothukudi',
   'Nagercoil',
 ];
@@ -193,7 +181,7 @@ export function AreasWeServe() {
       id="areas"
       eyebrow="Where we serve"
       title="Serving Customers Across Tamil Nadu"
-      intro="We are based in Irugur, Coimbatore, and support property, registration, and bank file enquiries across Tamil Nadu."
+      intro="Based in Irugur, Coimbatore, supporting property, registration, and bank file enquiries across Tamil Nadu."
     >
       <div className="mx-auto max-w-4xl rounded-2xl border border-navy/10 bg-mist/60 p-6 text-center sm:p-8">
         <h3 className="font-heading text-xl font-bold text-navy">
@@ -201,11 +189,11 @@ export function AreasWeServe() {
         </h3>
 
         <p className="mt-2 text-sm text-muted">
-          Share your location and need so we can confirm service availability in your area.
+          Share your location and requirement to check service availability.
         </p>
 
         <p className="mt-5 rounded-xl bg-white p-5 text-sm font-medium leading-loose text-navy shadow-sm">
-          {serviceAreas.join('  •  ')}
+          {serviceAreas.join(' • ')}
         </p>
 
         <div className="mt-6">
@@ -213,8 +201,7 @@ export function AreasWeServe() {
             href="/contact"
             className="inline-flex items-center justify-center gap-2 rounded-lg bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy/90"
           >
-            Contact Our Team
-            <ArrowRight size={16} aria-hidden="true" />
+            Contact Our Team →
           </Link>
         </div>
       </div>
