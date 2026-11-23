@@ -109,9 +109,15 @@ export default function RootLayout({
     crossOrigin: 'anonymous',
   });
 
+  preload('/images/property-document-services-tamil-nadu.jpg', {
+    as: 'image',
+  });
+
   return (
     <html lang="en-IN">
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
@@ -132,9 +138,7 @@ export default function RootLayout({
 
         <Footer />
 
-        <aside aria-label="WhatsApp enquiry">
-          <WhatsAppButton />
-        </aside>
+        <WhatsAppButton />
 
         {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
       </body>

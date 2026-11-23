@@ -1,4 +1,3 @@
-
 import {
   House,
   Handshake,
@@ -7,36 +6,20 @@ import {
 } from 'lucide-react';
 
 const items = [
-  {
-    Icon: Scale,
-    text: ['Document Checks', '& Process Guidance'],
-  },
-  {
-    Icon: House,
-    text: ['Property Records', '& Registration Support'],
-  },
-  {
-    Icon: Handshake,
-    text: ['Bank & Loan', 'Paperwork Assistance'],
-  },
-  {
-    Icon: ShieldCheck,
-    text: ['Clear Communication', '& Customer Support'],
-  },
+  { Icon: Scale, label: 'Document Checks & Guidance' },
+  { Icon: House, label: 'Property & Registration Help' },
+  { Icon: Handshake, label: 'Bank & Loan Paperwork' },
+  { Icon: ShieldCheck, label: 'Clear & Honest Support' },
 ];
 
 export function Highlights() {
   return (
     <section className="strip" aria-label="Our service highlights">
       <ul className="wrap">
-        {items.map(({ Icon, text }) => (
-          <li key={text[0]} className="cell">
+        {items.map(({ Icon, label }) => (
+          <li key={label} className="cell">
             <Icon strokeWidth={1.5} aria-hidden="true" />
-            <span>
-              {text[0]}
-              <br />
-              {text[1]}
-            </span>
+            <span>{label}</span>
           </li>
         ))}
       </ul>

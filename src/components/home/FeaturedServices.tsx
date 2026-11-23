@@ -1,6 +1,4 @@
-
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 
 import { Section } from '@/components/ui/Section';
 import { ServiceCard } from '@/components/services/ServiceCard';
@@ -46,7 +44,7 @@ export function FeaturedServices({
       tone={tone}
     >
       {list.length > 0 && (
-        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {list.map((service) => (
             <li key={service.slug}>
               <ServiceCard service={service} />
@@ -55,14 +53,13 @@ export function FeaturedServices({
         </ul>
       )}
 
-      <div className="mt-10 text-center">
+      <div className="mt-8 text-center">
         <Link
           href={categoryInfo.path}
           className="btn btn-dark btn-sm"
           aria-label={`Explore all ${categoryInfo.title}`}
         >
-          Explore All {categoryInfo.title}
-          <ArrowRight size={16} aria-hidden="true" />
+          Explore All {categoryInfo.title} →
         </Link>
       </div>
     </Section>

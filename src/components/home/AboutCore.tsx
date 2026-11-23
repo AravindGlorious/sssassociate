@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -44,6 +43,7 @@ export function AboutCore() {
             alt="Property documents, a model house and scales representing document support"
             width={800}
             height={404}
+            loading="eager"
             sizes="(max-width: 900px) 100vw, 40vw"
             className="h-full w-full object-cover"
           />
@@ -53,24 +53,20 @@ export function AboutCore() {
           <p className="kick">About SSS Associate Services</p>
 
           <h2 id="about-title">
-            Practical Support for Important
-            <em> Property &amp; Financial Documents</em>
+            Clear Help for Key
+            <em> Property &amp; Financial Papers</em>
           </h2>
 
           <p>
-            SSS Associate Services is a document assistance and
-            coordination service based in Irugur, Coimbatore,
-            Tamil Nadu. We help customers understand property
-            documents, organize registration paperwork, prepare
-            bank-related files and coordinate document requirements.
+            Based in Irugur, Coimbatore, we help people check property
+            records, prepare registration files, and organize bank documents.
+            We guide you through each step without confusion.
           </p>
 
           <p>
-            We believe the process should be easier to understand.
-            Our team explains requirements in simple English and
-            Tamil, helps identify the next steps and coordinates
-            with qualified professionals when specialist advice
-            is needed.
+            We explain requirements in simple English and Tamil. When legal
+            or specialist advice is needed, we connect you with qualified
+            professionals.
           </p>
 
           <Link href="/about" className="btn btn-sm">

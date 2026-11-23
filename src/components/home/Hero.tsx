@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react';
@@ -9,19 +8,17 @@ export function Hero() {
       <div className="wrap">
         <div>
           <p className="kick">
-            Trust | Transparency | Professionalism
+            Trust • Transparency • Professionalism
           </p>
 
           <h1 id="hero-title">
-            Property &amp; Document Services{' '}
+            Property &amp; Document Help{' '}
             <em>Across Tamil Nadu</em>
           </h1>
 
           <p>
-            Need help checking property papers, preparing documents,
-            or understanding registration steps? We explain the process
-            in simple words and help you plan your next steps.
-            We also assist with bank and loan paperwork.
+            Check property papers, plan land registration, and organize
+            bank loan files. We guide you through each step in simple words.
           </p>
 
           <div className="cta">
