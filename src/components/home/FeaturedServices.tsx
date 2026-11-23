@@ -32,11 +32,11 @@ export function FeaturedServices({
   const list = slugs
     .map(getService)
     .filter((service): service is Service => Boolean(service))
-    .map(({ slug, title: serviceTitle, summary, shortDescription }) => ({
+    .map(({ slug, title: serviceTitle, summary, category: serviceCategory }) => ({
       slug,
       title: serviceTitle,
       summary,
-      shortDescription,
+      category: serviceCategory,
     }));
 
   const categoryInfo = categories[category];
