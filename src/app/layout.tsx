@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { preload } from 'react-dom';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 import { business } from '@/config/business';
@@ -12,6 +13,7 @@ import { Footer } from '@/components/layout/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
 const siteUrl = business.url.replace(/\/+$/, '');
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 const seoTitle =
   'Property Document Support in Tamil Nadu | SSS Associate';
@@ -133,6 +135,8 @@ export default function RootLayout({
         <aside aria-label="WhatsApp enquiry">
           <WhatsAppButton />
         </aside>
+
+        {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
       </body>
     </html>
   );
