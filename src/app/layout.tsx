@@ -13,7 +13,7 @@ import { Footer } from '@/components/layout/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
 const siteUrl = business.url.replace(/\/+$/, '');
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-5Y36TF33Y7';
 
 const seoTitle =
   'Property Document Support in Tamil Nadu | SSS Associate';
